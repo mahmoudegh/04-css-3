@@ -1,0 +1,1136 @@
+/*Start Global*/
+*
+{
+	font-family: Arial, Tahoma;
+ 	/*box-sizing: content-box; (Default Value)*/
+ 	/*Allow Me To Add Border Or Pading (exept margin)
+ 	  Without Change In The Arrange Of Elements*/
+ 	box-sizing: border-box
+}
+
+
+div
+{
+	float: left;
+	width:200px;
+	height: 200px;
+	margin: 20px;
+	padding: 10px;
+	background-color: #EEE;
+	border: 1px solid #CCC
+}
+
+h3, a{float: right; width: 50%; padding-bottom: 10px}
+
+hr{width: 100%; overflow: hidden}
+
+
+img{display: block}
+
+.img-container
+{
+	float: left;
+	width: 50%;
+	width: 400px;
+	height: 200px;
+	margin: 20px;
+	padding: 20px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	/*To Activate 3D*/
+	perspective: 600px
+}
+
+/*End Global*/
+
+
+/*Start #03 - Border Radius*/
+.border-radius
+{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 50px;
+
+	/*This Is The Same As Above*/
+	border-radius: 10px 30px 40px 50px 
+}
+/*End #03 - Border Radius*/
+
+
+/*Start #04 - Box Shadow*/
+/*box-shadow: Horizontal(+/-), Vertical(+/-), Blur, 
+  Spread(rare used),Color, Inset(rare used)*/
+.box-shadow
+{
+	box-shadow:-5px -5px 8px #F00,
+			    /*Another Shadow*/
+			    5px 5px 8px #00F,
+			    /*Another Shadow*/
+			   -10px -10px 8px #080
+}
+/*End #04 - Box Shadow*/
+
+
+/*Start #05 - Box Sizing*/
+/*Look To box-sizing; In Global*/
+section
+{
+	float: left;
+	width: 400px;
+	margin: 20px;
+	background-color: #EEE;
+	overflow: hidden
+}
+
+/*If We Add Padding Or Border
+  The Arrange Of Div Will Change So We
+  Use (box-sizing:border-box;) To Fix This*/
+.left
+{
+	float: left;
+	width: 30%;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #CCC;
+	height: auto;
+	background-color: #F00;
+	color: #FFF
+}
+
+.right
+{
+	float: right;
+	width: 70%;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #CCC;
+	height:auto;
+	background-color: #00F;
+	color: #FFF
+}
+/*End #05 - Box Sizing*/
+
+
+/*Start #06 - Examples Box Shadow, Border Radius*/
+img.examples
+{
+	float: left;
+	display: inline;
+	margin: 20px;
+	padding: 3px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	box-shadow: 7px  7px 20px #000,
+			   -7px -7px 20px #E4E4E4
+}
+
+img.examples:hover
+{
+	border-radius: 50%;
+}
+/*End #06 - Examples Box Shadow, Border Radius*/
+
+
+
+/*Start #07 - Text Shadows*/
+/*box-shadow: Horizontal(+/-), Vertical(+/-), Blur-Radius, Color*/
+/*The Default (text-shadow:none;)*/
+h1
+{
+	float: left;
+	margin: 20px;
+	text-shadow: 1px 2px 3px #2342F0,
+				 /*Another Shadow*/
+				 2px 3px 7px #9F9F9F,
+				 /*Another Shadow*/
+				 1px 2px 3px #F01149
+}
+/*End #07 - Text Shadows*/
+
+
+
+/*Start #08 - Text Overflow*/ 
+.text-overflow 
+{  
+	height: auto;   
+	/*Prevent The Sentence From Wrap*/
+	white-space:nowrap;
+	/*Clear The Sentence Outside The Div*/
+	overflow: hidden;
+	/*text-overflow: clip(Default), ellipsis, inherit*/
+	text-overflow: ellipsis
+}
+
+.text-overflow:hover
+{
+	overflow: visible;
+} 
+/*End #08 - Text Overflow*/
+
+
+
+/*Start #09 - Word Wrap, White Space*/
+.word-wrap
+{
+	height: auto;
+	/*Diference Between white-space: & word-wrap: IS THAT:
+	  # white-space: Need Space To Break The Sentence From It.
+	  # word-wrap: Dont Need Space Because IT Break The Word.*/
+	/*word-wrap: normal(Default), break-word*/
+	word-wrap: break-word
+}
+/*End #09 - Word Wrap, White Space*/
+
+
+
+/*Start #10 - 2D Transform - Rotate*/
+.transform-rotate
+{
+	/*deg==>degree*/
+	transform: none;
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-rotate:hover
+{
+	transform: rotate(25deg);
+}
+/*End #10 - 2D Transform - Rotate*/
+
+
+
+/*Start #11 - 2D Transform - Scale*/
+.transform-scale
+{
+	/*transform: scale(width, height);*/
+	/*transform: scale(2); Mean That[X=2,Y=2]*/
+	/*transform: scale(0.5,0.5); Is The Same As (.5,.5);*/
+	/*transform: scaleX(2);  [X=width]*/
+	/*transform: scaleY(2);  [Y=height]*/
+	/*transform: scale(-1,1); This Make Flip Over*/
+	transform: none;
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-scale:hover
+{
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: scale(2,2)
+}
+/*End #11 - 2D Transform - Scale*/
+
+
+
+/*Start #12 - 2D Transform - Translate*/
+.transform-translate
+{
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-translate:hover
+{
+	/*transform: translate (horizontal,vertical);*/
+	/*transform: translate (10px); Mean That[X=10px,Y=0]*/
+	/*transform: translate (+,-);*/
+	/*transform: translateX(10px);  [X=horizontal]*/
+	/*transform: translateY(10px);  [Y=vertical]*/
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: translate(100px,50px);
+	/*Can Use Multiple Transform Types, Uncomment & Try That Below*/
+	/*transform: scale(.7) translate(500px,15px) rotate(360deg)*/
+	/*The End Result Differ According To The Arrange Of Transform Types*/
+}
+/*End #12 - 2D Transform - Translate*/
+
+
+
+/*Start #13 - 2D Transform - Skew*/
+/*Will Discuss Later*/
+.transform-skew{transition: all 1s ease-in-out}
+
+.transform-skew:hover
+{
+	/*transform: skew (X deg,Y deg);*/
+	/*transform: skew (10deg); Mean That[X=10deg,Y=0deg]*/
+	/*transform: skew (+,-);*/
+	/*transform: skewX(10deg); [X=The resulting angle of intersection {Y Of <p>} With {Y Of <div>}]*/
+	/*transform: skewY(10deg); [Y=The resulting angle of intersection {X Of <p>} With {X Of <div>}]*/
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: skew(30deg,10deg);
+	/*Can Use Multiple Transform Types, Uncomment & Try That Below*/
+	/*transform: scale(.7) translate(500px,15px) rotate(360deg) skew(30deg.10deg)*/
+	/*The End Result Differ According To The Arrange Of Transform Types*/
+}
+/*End #13 - 2D Transform - Skew*/
+
+
+
+/*Start #14 - 2D Transform - Matrix*/
+/*transform: matrix(  a,      b,     c,     d,        x,          y     )*/
+/*transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)*/
+/*transform: matrix(  1,      0,     0,     1,        0,          0     )*/
+img.matrix{transition: all 1s ease-in-out}
+
+img.matrix:hover
+/*Uncomment & Test*/
+{
+	/*transform: matrix(1, 0, 0, 1, 300, 30);*/
+	/*transform: translate(300px,30px);*/
+
+	/*transform: matrix(-1, 0, 0, 1, 0, 0);*/
+	transform: scale(-1, 1);
+
+	/*transform: matrix(.86, .5, -.5, .86, 0, 0);*/
+	/*transform: rotate(30deg)*/
+}
+/*End #14 - 2D Transform - Matrix*/
+
+
+
+/*Start #15 - 3D Transform - Rotate X, Y, Z()*/
+img.transform-3d-rotate{transition: all 1s ease-in-out}
+
+/*transform: rotateX(), rotateY(), rotateZ()*/
+/*3D Rotate Do Somthings The Same As Different Types Of 2D Transform Types Do*/
+/*This Do The Same As Flip Over*/
+/*When We Activated 3D The WAy Of Flip Changed*/
+img.transform-3d-rotate:hover{transform: rotateY(180deg)}
+/*End #15 - 3D Transform - Rotate X, Y, Z()*/
+
+
+
+
+/*Start #16 - 3D Transform - Translate 3D*/
+img.transform-3d-translate{transition: all 1s ease-in-out}
+
+/*The Third Diamension(3D) Activated With perspective For Body In Global*/
+/*translate3d(0, 0, 100px) Is The Same As translateZ(100px)*/
+/*Therefore We Have translateX(), translateY(), translateZ()*/
+/*Translate(X, Y, Z) Accept(+/-)*/
+img.transform-3d-translate:hover{transform: translate3d(50px,50px,50px)}
+/*End #16 - 3D Transform - Translate 3D*/
+
+
+
+/*Start #17 - 3D Transform - Scale 3D*/
+img.transform-3d-scale{transition: all 1s ease-in-out}
+
+/*We Must Use Another Transform Type With 3D Scale (As RotateY) To Can See It's Effect*/
+img.transform-3d-scale:hover{transform: scale3d(1, 1, 2) rotateY(60deg)}
+/*End #17 - 3D Transform - Scale 3D*/
+
+
+
+/*Start #18 - 3D Transform - Matrix 3D*/
+/*transform: matrix3d(  0,    0,0,0,0,   0,    0,0,0,0,0,0,     0,          0,        0,    0)*/
+/*transform: matrix3d(scaleX, 0,0,0,0, scaleY, 0,0,0,0,0,0, translateX, translateY, scaleZ, 0)*/
+img.transform-3d-matrix{transition: all 1s ease-in-out}
+
+img.transform-3d-matrix:hover
+{
+	transform: matrix3d( 0.07175660428631994, -0.09699054404837933, 0,	
+		                -0.0005036521059873574, -1.1547011149629907,	
+		                 0.12209983243960523, 0, -0.0032479806684548493,
+                         0, 0, 1, 0, 222, 58, 0, 1)
+}
+/*End #18 - 3D Transform - Matrix 3D*/
+
+
+
+/*Start #19 - 3D Transform - Perspective*/
+img.perspective
+{
+	transition: all 1s ease-in-out; 
+	/*transform: translateZ(100px)*/
+}
+/*perspective is the distance betwwen the element and the user*/
+/*the 3rd diamension of the element(child) can't be more than the perspective of the parent()it will disapear*/
+img.perspective:hover{transform: translateZ(100px)}
+
+/*When The Perspective Increase The Size Of The Element Decrease And The opposite is true
+(In the case of the stability of the third dimension)*/
+/*Perspective Origin Is The Vanshing Point Where The Viewer Look To In The Elelment*/
+/*Perspective Origin Values: [X , Y] = [50% , 50%] = [px, px] = [left, right, center, top, bottom]*/
+.container
+{
+	float: left;
+	width: 50%;
+	width:400px;
+	height: 630px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 0
+}
+
+.img-container-a, .img-container-b, .img-container-c
+{
+	 height: 183px;
+	 margin: 20px auto;
+	 padding: 0;
+	 background-color: #EEE;
+	 border: 1px solid #CCC;
+	 float: none;
+	 width: 361px
+}
+
+/*Left=0 , Center=50% , Right=100%*/
+.img-container-a{perspective: 500px; perspective-origin: 50% 50%}
+
+.img-container-b{perspective: 300px; perspective-origin: center}
+
+.img-container-c{perspective: 200px; perspective-origin: center}
+
+.container p
+{
+	text-align: center;
+	margin: 0;
+	padding: 0
+}
+/*End #19 - 3D Transform - Perspective*/
+
+
+
+/*Start #20 - 3D Transform - Transform Origin*/
+.transform-origin{transition: all 1s ease-in-out}
+
+.transform-origin:hover
+{
+	transform: rotate(360deg);
+	/*Transform Origin Specifies the starting point of the movement*/
+	/*Transform Origin Values (%,%   top,bottom,right,left,center   px)*/
+	transform-origin: top right
+}
+/*End #20 - 3D Transform - Transform Origin*/
+
+
+
+/*Start #20 - 3D Transform - Transform Style*/
+.container-style
+{
+	float: left;
+	width: 50%;
+	width:400px;
+	height: 300px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 20px;
+	perspective: 500px
+}
+.father
+{
+	width: 180px;
+	height: 180px;
+	position: relative;
+	background-color: #080;
+	transition: all .5s ease-in-out;
+	transform: rotateY(20deg);
+	float: none;
+	/*The Default Value Of transform-style: flat;*/
+	/*transform-style: preserve-3d;  preserve The 3D Style*/
+	transform-style: preserve-3d;
+}
+
+.child1
+{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	background-color: #F00;
+	transform: translateZ(50px) rotateY(45deg);
+	float: none;
+	margin: 0
+}
+
+.child2
+{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	background-color: #00F;
+	transform: translateZ(150px) rotateX(45deg);
+	float: none;
+	margin: 0
+}
+/*End #20 - 3D Transform - Transform Style*/
+
+
+
+/*Start #21 - 3D Transform - Backface Visibility*/
+.container-backface
+{
+	width: 400px;
+	height: 264px;
+	perspective: 500px
+}
+.backface-visibility-father
+{
+	padding: 0;
+	background-color:transparent;
+	border: 0;
+	margin: 20px 88px;
+	position: relative;
+	transition: all .5s ease-in-out;
+	transform-style: preserve-3d
+}
+
+.backface-visibility-father:hover
+{
+	transform: rotateY(180deg)
+}
+
+.backface-visibility-father >div
+{
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	color: #FFF;
+	font-size: 20px;
+	text-align: center
+}
+
+.front
+{
+	z-index: 2;
+	background-color: #F00;
+	/*backface-visibility: visible;(Default), hidden*/
+	backface-visibility: hidden;
+	/*This To Fix A problem In Firefox 
+	OR We Can Add backface-visibility:hidden; To Father*/
+	transform: rotateX(0deg);
+}
+
+.back
+{
+	z-index: 1;
+	background-color: #00F;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+/*End #21 - 3D Transform - Backface Visibility*/
+
+
+
+/*Start #22 - 3D Transform - Create Flip Card*/
+.container-card/*from me*/
+{
+	width: 400px;
+	height: 400px;
+	perspective: 1000px
+}
+
+.card-father
+{
+	border: 0;/*from me vs global div*/
+
+	width: 300px;
+	height: 340px;
+	margin: 20px 38px;/*from me vs global div (50px auto Osama)*/
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+	backface-visibility: hidden/*Used to fix problem in firefox*/
+}
+
+.card-father:hover
+{
+	/*Can Use rotateX*/
+	transform: rotateY(180deg);
+}
+
+.card-father >div
+{
+	margin: 0;/*from me vs global div*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #EEE;
+	color: #777;
+	padding: 0;
+	border-radius: 10px;
+	text-align: center
+}
+
+.card-father .card-front
+{
+	z-index: 2;
+	backface-visibility: hidden
+	/*display: none; Used During Styling The Backface Then Cleard*/
+}
+
+.card-father .card-front header
+{
+	background-color: #444;
+	width: 100%;
+	height: 80px;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 55px
+}
+
+.card-father .card-front img
+{
+	display: inline;/*from me vs global img*/
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: relative;
+	top: 25px
+}
+
+.card-father .card-front h4
+{
+	margin-bottom: 5px
+}
+
+.card-father .card-front p
+{
+	margin: auto;
+	width: 90%;
+	line-height: 1.7
+}
+
+.card-father .card-front span
+{
+	display: inline-block;
+	margin-top: 5px;
+	color: #60AC37;
+	font-weight: bold;
+}
+
+.card-father .card-back
+{
+	z-index: 1;
+	/*Can Use rotateX*/
+	transform: rotateY(180deg);
+	/*Used When There Is Problem During Rotation*/
+	backface-visibility: hidden
+}
+
+.card-father .card-back ul
+{
+	list-style: none;
+	padding: 0;
+	line-height: 2
+}
+/*End #22 - 3D Transform - Create Flip Card*/
+
+
+
+/*Start #23 - Background New Features*/
+
+/*#23-1 - background-size*/
+.background-size
+{
+	width: 400px;
+	height: 200px;
+	color: #FFF;
+	/*background-repeat: no-repeat; Can Used As Below*/
+	background: url("../images/wall.jpg") no-repeat;
+	/*background-size: 
+	auto auto(Default Value),
+	(px px),(% %),
+	(contain)==>Img Scaled with limits(fill the smaller size
+			    between width or height & When width and height
+			    are the same size it fill width only
+			    #contain not cut the img)
+	(cover)  ==>Img Scaled  to large without limits But When scaled to small
+				it cut from the img
+				cover More Used Than Contain*/
+	background-size: 100% 100%;
+}
+
+/*#23-2 - background-clip*/
+.background-clip
+{
+	width: 400px;
+	height: 200px;
+	color: #FFF;
+	/*Background cant cover The Outline*/
+	outline: 10px dashed #080;
+	border: 10px dashed #00F;
+	padding: 10px;
+	background: #F00;
+	/*background-clip: 
+					  border-box; ==>Background Start From Border(Default)
+				      padding-box;==>Background Start After Border
+				      content-box;==>Background Start From Content*/
+	background-clip: content-box
+}
+
+/*#23-3 - background-origin*/
+/*The Same As Background-Clip But With Img*/
+.background-origin
+{
+	width: 400px;
+	height: 200px;
+	color: #FFF;
+	padding: 30px;
+	border: 10px dotted #F00;
+	background: url("../images/wall.jpg") no-repeat;
+	/*Can Use Multiple Background Properities To Achive What I Need*/
+	background-size: cover;
+	/*background-origin: 
+					  border-box; ==>Background Start From Border(Default)
+				      padding-box;==>Background Start After Border
+				      content-box;==>Background Start From Content*/
+    /*Img Move Only From Top & Left And When Used background-size: cover;
+      It Move from Right But Stll Dont Move From Bottom..Other Propereties
+      Will Fix This In Comming Lessons*/
+	background-origin: content-box
+}
+/*End #23 - Background New Features*/
+
+
+
+/*Start #24 - Overflow New Features*/
+.overflow
+{	/*overflow:visible;(Default)*/
+	overflow-y: scroll;
+	overflow-x: hidden
+}
+/*End #24 - Overflow New Features*/
+
+
+
+/*Start #25 - Resize*/
+.resize
+{
+	overflow-y: scroll;
+	overflow-x: scroll;
+	/*Resize Values: none;(Default), both, vertical, horizontal*/
+	/*The Default Value None Used For Example To Clear 
+	  The Default Resize From Textarea*/
+	/*Resize Properities Used With Textarea*/
+	/*Resize Not Supported In IE*/
+	resize: horizontal;
+}
+/*End #25 - Resize*/
+
+
+
+/*Start #26 - Opacity*/
+.opacity
+{
+	/*Opacity Values from 0 to 1*/
+	/*Opacity Affect The inside elementa also*/
+	/*flter: alpha(opacity=50)==>This Used To Activate
+	  Opacity in IE(50 mean .5  // 90 mean .9)*/
+	/*We Can Use {opacity: 0;} Instead Of {visibility:hidden;}*/
+	opacity: 0.4
+}
+/*End #26 - Opacity*/
+
+
+
+/*Start #27 - Flex Direction | Flex Wrap*/
+/*Flex Mean Flexablity*/
+/*Devided Into Properetes For parent(Container) & For Child(Inner Elements)*/
+.flex-direction-wrap
+{
+	height: auto;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*flex-direction: #row; (Default ACC. to direction of page)
+	                  #row-reverse; (reverse Affect The Div but 
+	                                not affect on worde inside it)
+                      #column; #column-reverse*/
+	flex-direction: row;
+	/*flex-wrap: #nowrap; (Default)
+				 #wrap; (Make Wrap When Neccesary AS parent width 
+				        smaller than inner Divs)
+		         #wrap-reverse;(The Same As Wrap But Reversed)*/
+	flex-wrap: nowrap
+}
+
+.flex-direction-wrap >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-direction-wrap >div:first-of-type{background-color: #080}
+.flex-direction-wrap >div:nth-of-type(2){background-color: #F00}
+.flex-direction-wrap >div:last-of-type{background-color: #00F}
+/*End #27 - Flex Direction | Flex Wrap*/
+
+
+
+/*Start #28 - Flex Flow | Justify Content*/
+/*Flex Flow*/
+.flex-flow
+{
+	height: auto;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+
+	/*flex-flow: Is The Short Hand Code For flex-direction: flex-wrap:*/
+	/*flex-flow: row, nowrap(Default)*/
+	flex-flow: row nowrap
+}
+
+.flex-flow >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-flow >div:first-of-type{background-color: #080}
+.flex-flow >div:nth-of-type(2){background-color: #F00}
+.flex-flow >div:last-of-type{background-color: #00F}
+
+
+/*Justify Content*/
+.flex-justify
+{
+	height: auto;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*justify-content: flex-start;
+					   flex-end;
+					   center;
+					   space-between;
+					   space-around;*/
+	justify-content: space-around;
+}
+
+.flex-justify >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-justify >div:first-of-type{background-color: #080}
+.flex-justify >div:nth-of-type(2){background-color: #F00}
+.flex-justify >div:last-of-type{background-color: #00F}
+/*End #28 - Flex Flow | Justify Content*/
+
+
+
+/*Start #29 - Align Items | Align Content*/
+
+/*Align- Items*/
+.flex-align-items
+{
+	height: 300px;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*This Properety Respect Height&Width Of The Element*/
+	/*align-itmes Affect on Itemes Inside The Div(move top&bottom) BUT
+	  justify-content Affect On The Div(move right&left)*/
+	/*align-items: stretch(Default);
+				   flex-start;
+				   flex-end;
+				   center;
+				   baseline;*/
+	align-items: flex-start;
+}
+
+.flex-align-items >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: ;
+	width: 109px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-align-items >div:first-of-type{background-color: #080}
+.flex-align-items >div:nth-of-type(2){background-color: #F00}
+.flex-align-items >div:last-of-type{background-color: #00F}
+
+/*Align Content*/
+.flex-align-content
+{
+	height: 500px;
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*This To Can Test Align Content*/
+	flex-wrap: wrap;
+	/*Effect Of align content Apear When There Is No Enough Width*/
+	/*align-content Do The Same As justify-content But Vertical*/
+	/*align-content: stretch(Default);
+					 center;
+					 flex-start;
+					 flex-end;
+					 space-between;
+					 space-around;*/
+	align-content: space-around;
+}
+
+.flex-align-content >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: ;
+	width: 344px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-align-content >div:first-of-type{background-color: #080}
+.flex-align-content >div:nth-of-type(2){background-color: #F00}
+.flex-align-content >div:last-of-type{background-color: #00F}
+/*End #29 - Align Items | Align Content*/
+
+
+
+/*Start #30 - Order | Flex Grow | Flex Shrink*/
+/*Order*/
+.order
+{
+	height: 200px;
+	width: 400px;
+	padding: 10px;
+	display: flex
+}
+
+.order >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.order .one  {background-color: #080; order: 3}
+.order .two  {background-color: #F00; order: 1}
+.order .three{background-color: #F0F; order: 4}
+.order .four {background-color: #00F; order: 2}
+
+/*Flex Grow*/
+.grow
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Grow*/
+	display: flex;
+	border: 0/*To Can Test Grow*/
+}
+
+.grow >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px;
+	flex-grow: 0/*Default Value*/
+}
+/*Grow Start When There Is Decrease In The Size Of The 
+  Inner Divs Therefore The Divs With The Highest Flex
+  Grow Value Will Start To Grow More Than Other Divs 
+  That With Lower Flex Grow Value(Divs With Lower Flex 
+  Grow Value Will Decrease In Size)*/
+
+  /*Grow Start When There Is Increase In The Size Of 
+  The Container Therefore The Divs With The Highest Flex
+  Grow Value Will Start To Grow More Than Other Divs 
+  That With Lower Flex Grow Value*/
+.grow .one  {background-color: #080; flex-grow: 3}
+.grow .two  {background-color: #F00; flex-grow: 2}
+.grow .three{background-color: #F0F; flex-grow: 1}
+.grow .four {background-color: #00F; flex-grow: 0}
+
+/*Flex Shrink*/
+.shrink
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Shrink*/
+	display: flex;
+	border: 0/*To Can Test Shrink*/
+
+}
+
+.shrink >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px;
+	flex-shrink: 1/*Default Value*/
+}
+/*Shrink Is The Opposite Of Grow*/
+/*flex-shrink: 0 => Prevent Shrink*/
+.shrink .one  {background-color: #080; flex-shrink: 3}
+.shrink .two  {background-color: #F00; flex-shrink: 2}
+.shrink .three{background-color: #F0F; flex-shrink: 1}
+.shrink .four {background-color: #00F; flex-shrink: 0}
+/*End #30 - Order | Flex Grow | Flex Shrink*/
+
+
+
+/*Start #31 - Flex Basis | Shorthand*/
+/*Flex Basis*/
+.basis
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Basis*/
+	display: flex;
+	border: 0/*To Can Test Basis*/
+
+}
+
+.basis >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: auto;/*I Deleted The width To Can Test Basis*/ 
+	color: #FFF;
+	padding: 10px
+}
+/*The Size Of Container Must Be Sutable To New Sizes From Basis*/
+/*When The Size Of The Container Is Smaller Than 
+  The Total Size Of The Inner Divs==>The Flex Box
+  Resize The Inner Divs To New Smaller Size Even Smaller
+  Than Size Given By Basis*/
+
+/*The flex-basis CSS property sets the initial main size
+  of a flex item. It sets the size of the content box unless
+   otherwise set with box-sizing.*/
+
+/*Note: in case both flex-basis (other than auto) and width 
+  (or height in case of flex-direction: column) are set for 
+  an element, flex-basis has priority.*/
+/*Default Value auto=>The Sam Value From Flex Box*/
+/*The Size Of The Word Inside The Div Keep A size For
+  Itself(Can't Break A word)*/
+.basis .one  {background-color: #080; flex-basis:70px}
+.basis .two  {background-color: #F00; flex-basis:80px}
+.basis .three{background-color: #F0F; flex-basis:100px}
+.basis .four {background-color: #00F; flex-basis:150px}
+
+/*Shorthand*/
+.shorthand
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Basis*/
+	display: flex;
+	border: 0/*To Can Test Basis*/
+
+}
+
+.shorthand >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: 50px; /*To Can Tes Grow & Shrink*/
+	color: #FFF;
+	padding: 10px
+}
+
+/*flex:  0      1     auto; (Default Value)*/
+/*flex: Grow  Shrink  Basis;*/
+/*To Test Basis Must Stop Grow & Set Width To auto*/
+.shorthand .one  {background-color: #080; flex: 0 1 auto}
+.shorthand .two  {background-color: #F00; flex: 2 0 auto}
+.shorthand .three{background-color: #F0F; flex: 0 1 auto}
+.shorthand .four {background-color: #00F; flex: 0 1 auto}
+/*End #31 - Flex Basis | Shorthand*/
+
+
+
+/*Start #32 - Transition - Intro*/
+
+/*transition: <Property> | <Duration> | <Timing Function> | <Delay>*/
+/*In Case Of Same Duration Use all*/
+/*Must Use Property & Duration*/
+.transition {transition: width 3s, background-color 6s}
+
+.transition:hover {width: 400px; background-color: #00F}
+/*End #32 - Transition - Intro*/
+
+
+
+/*Start #33 - Transition - Property | Duration*/
+.transition-property-duration 
+{
+	/*transition-property: all(Default Value), none(For Reset)*/
+	/*If We Wrote Only Background Not Background Color=>
+	  The Transition Will Affect All Background Properties*/
+	transition-property: width, background-color;
+	/*transition-duration: 0s(Default Value)*/
+	/*s=seconde, ms=milli seconde*/
+	/*I Can Use Duration For Each Property In The Order*/
+	transition-duration: 2000ms, 6s
+}
+
+
+.transition-property-duration:hover
+{
+	width: 400px;
+    background-color: #00F
+}
+/*End #33 - Transition - Property | Duration*/

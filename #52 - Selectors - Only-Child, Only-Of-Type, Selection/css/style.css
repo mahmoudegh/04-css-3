@@ -1,0 +1,2551 @@
+/*Start Global*/
+*
+{
+	font-family: Arial, Tahoma;
+ 	/*box-sizing: content-box; (Default Value)*/
+ 	/*Allow Me To Add Border Or Pading (exept margin)
+ 	  Without Change In The Arrange Of Elements*/
+ 	box-sizing: border-box
+}
+
+
+div
+{
+	float: left;
+	width:200px;
+	height: 200px;
+	margin: 20px;
+	padding: 10px;
+	background-color: #EEE;
+	border: 1px solid #CCC
+}
+
+h3, a
+{
+	float: right; 
+	width: 50%; 
+	padding-bottom: 10px; 
+	margin-bottom: 0
+}
+
+/*Google Chroome Don't Need overflow: hidden*/
+hr{width: 100%; overflow: hidden}
+
+
+img{display: block}
+
+.img-container
+{
+	float: left;
+	width: 50%;
+	width: 400px;
+	height: 200px;
+	margin: 20px;
+	padding: 20px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	/*To Activate 3D*/
+	perspective: 600px
+}
+
+/*End Global*/
+
+
+/*Start #03 - Border Radius*/
+.border-radius
+{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 50px;
+
+	/*This Is The Same As Above*/
+	border-radius: 10px 30px 40px 50px 
+}
+/*End #03 - Border Radius*/
+
+
+/*Start #04 - Box Shadow*/
+/*box-shadow: Horizontal(+/-), Vertical(+/-), Blur, 
+  Spread(rare used),Color, Inset(rare used)*/
+.box-shadow
+{
+	box-shadow:-5px -5px 8px #F00,
+			    /*Another Shadow*/
+			    5px 5px 8px #00F,
+			    /*Another Shadow*/
+			   -10px -10px 8px #080
+}
+/*End #04 - Box Shadow*/
+
+
+/*Start #05 - Box Sizing*/
+/*Look To box-sizing; In Global*/
+section
+{
+	float: left;
+	width: 400px;
+	margin: 20px;
+	background-color: #EEE;
+	overflow: hidden
+}
+
+/*If We Add Padding Or Border
+  The Arrange Of Div Will Change So We
+  Use (box-sizing:border-box;) To Fix This*/
+.left
+{
+	float: left;
+	width: 30%;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #CCC;
+	height: auto;
+	background-color: #F00;
+	color: #FFF
+}
+
+.right
+{
+	float: right;
+	width: 70%;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #CCC;
+	height:auto;
+	background-color: #00F;
+	color: #FFF
+}
+/*End #05 - Box Sizing*/
+
+
+/*Start #06 - Examples Box Shadow, Border Radius*/
+img.examples
+{
+	float: left;
+	display: inline;
+	margin: 20px;
+	padding: 3px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	box-shadow: 7px  7px 20px #000,
+			   -7px -7px 20px #E4E4E4
+}
+
+img.examples:hover
+{
+	border-radius: 50%;
+}
+/*End #06 - Examples Box Shadow, Border Radius*/
+
+
+
+/*Start #07 - Text Shadows*/
+/*box-shadow: Horizontal(+/-), Vertical(+/-), Blur-Radius, Color*/
+/*The Default (text-shadow:none;)*/
+h1
+{
+	float: left;
+	margin: 20px;
+	text-shadow: 1px 2px 3px #2342F0,
+				 /*Another Shadow*/
+				 2px 3px 7px #9F9F9F,
+				 /*Another Shadow*/
+				 1px 2px 3px #F01149
+}
+/*End #07 - Text Shadows*/
+
+
+
+/*Start #08 - Text Overflow*/ 
+.text-overflow 
+{  
+	height: auto;   
+	/*Prevent The Sentence From Wrap*/
+	white-space:nowrap;
+	/*Clear The Sentence Outside The Div*/
+	overflow: hidden;
+	/*text-overflow: clip(Default), ellipsis, inherit*/
+	text-overflow: ellipsis
+}
+
+.text-overflow:hover
+{
+	overflow: visible;
+} 
+/*End #08 - Text Overflow*/
+
+
+
+/*Start #09 - Word Wrap, White Space*/
+.word-wrap
+{
+	height: auto;
+	/*Diference Between white-space: & word-wrap: IS THAT:
+	  # white-space: Need Space To Break The Sentence From It.
+	  # word-wrap: Dont Need Space Because IT Break The Word.*/
+	/*word-wrap: normal(Default), break-word*/
+	word-wrap: break-word
+}
+/*End #09 - Word Wrap, White Space*/
+
+
+
+/*Start #10 - 2D Transform - Rotate*/
+.transform-rotate
+{
+	/*deg==>degree*/
+	transform: none;
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-rotate:hover
+{
+	transform: rotate(25deg);
+}
+/*End #10 - 2D Transform - Rotate*/
+
+
+
+/*Start #11 - 2D Transform - Scale*/
+.transform-scale
+{
+	/*transform: scale(width, height);*/
+	/*transform: scale(2); Mean That[X=2,Y=2]*/
+	/*transform: scale(0.5,0.5); Is The Same As (.5,.5);*/
+	/*transform: scaleX(2);  [X=width]*/
+	/*transform: scaleY(2);  [Y=height]*/
+	/*transform: scale(-1,1); This Make Flip Over*/
+	transform: none;
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-scale:hover
+{
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: scale(2,2)
+}
+/*End #11 - 2D Transform - Scale*/
+
+
+
+/*Start #12 - 2D Transform - Translate*/
+.transform-translate
+{
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-translate:hover
+{
+	/*transform: translate (horizontal,vertical);*/
+	/*transform: translate (10px); Mean That[X=10px,Y=0]*/
+	/*transform: translate (+,-);*/
+	/*transform: translateX(10px);  [X=horizontal]*/
+	/*transform: translateY(10px);  [Y=vertical]*/
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: translate(100px,50px);
+	/*Can Use Multiple Transform Types, Uncomment & Try That Below*/
+	/*transform: scale(.7) translate(500px,15px) rotate(360deg)*/
+	/*The End Result Differ According To The Arrange Of Transform Types*/
+}
+/*End #12 - 2D Transform - Translate*/
+
+
+
+/*Start #13 - 2D Transform - Skew*/
+/*Will Discuss Later*/
+.transform-skew{transition: all 1s ease-in-out}
+
+.transform-skew:hover
+{
+	/*transform: skew (X deg,Y deg);*/
+	/*transform: skew (10deg); Mean That[X=10deg,Y=0deg]*/
+	/*transform: skew (+,-);*/
+	/*transform: skewX(10deg); [X=The resulting angle of intersection {Y Of <p>} With {Y Of <div>}]*/
+	/*transform: skewY(10deg); [Y=The resulting angle of intersection {X Of <p>} With {X Of <div>}]*/
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: skew(30deg,10deg);
+	/*Can Use Multiple Transform Types, Uncomment & Try That Below*/
+	/*transform: scale(.7) translate(500px,15px) rotate(360deg) skew(30deg.10deg)*/
+	/*The End Result Differ According To The Arrange Of Transform Types*/
+}
+/*End #13 - 2D Transform - Skew*/
+
+
+
+/*Start #14 - 2D Transform - Matrix*/
+/*transform: matrix(  a,      b,     c,     d,        x,          y     )*/
+/*transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)*/
+/*transform: matrix(  1,      0,     0,     1,        0,          0     )*/
+img.matrix{transition: all 1s ease-in-out}
+
+img.matrix:hover
+/*Uncomment & Test*/
+{
+	/*transform: matrix(1, 0, 0, 1, 300, 30);*/
+	/*transform: translate(300px,30px);*/
+
+	/*transform: matrix(-1, 0, 0, 1, 0, 0);*/
+	transform: scale(-1, 1);
+
+	/*transform: matrix(.86, .5, -.5, .86, 0, 0);*/
+	/*transform: rotate(30deg)*/
+}
+/*End #14 - 2D Transform - Matrix*/
+
+
+
+/*Start #15 - 3D Transform - Rotate X, Y, Z()*/
+img.transform-3d-rotate{transition: all 1s ease-in-out}
+
+/*transform: rotateX(), rotateY(), rotateZ()*/
+/*3D Rotate Do Somthings The Same As Different Types Of 2D Transform Types Do*/
+/*This Do The Same As Flip Over*/
+/*When We Activated 3D The WAy Of Flip Changed*/
+img.transform-3d-rotate:hover{transform: rotateY(180deg)}
+/*End #15 - 3D Transform - Rotate X, Y, Z()*/
+
+
+
+
+/*Start #16 - 3D Transform - Translate 3D*/
+img.transform-3d-translate{transition: all 1s ease-in-out}
+
+/*The Third Diamension(3D) Activated With perspective For Body In Global*/
+/*translate3d(0, 0, 100px) Is The Same As translateZ(100px)*/
+/*Therefore We Have translateX(), translateY(), translateZ()*/
+/*Translate(X, Y, Z) Accept(+/-)*/
+img.transform-3d-translate:hover{transform: translate3d(50px,50px,50px)}
+/*End #16 - 3D Transform - Translate 3D*/
+
+
+
+/*Start #17 - 3D Transform - Scale 3D*/
+img.transform-3d-scale{transition: all 1s ease-in-out}
+
+/*We Must Use Another Transform Type With 3D Scale (As RotateY) To Can See It's Effect*/
+img.transform-3d-scale:hover{transform: scale3d(1, 1, 2) rotateY(60deg)}
+/*End #17 - 3D Transform - Scale 3D*/
+
+
+
+/*Start #18 - 3D Transform - Matrix 3D*/
+/*transform: matrix3d(  0,    0,0,0,0,   0,    0,0,0,0,0,0,     0,          0,        0,    0)*/
+/*transform: matrix3d(scaleX, 0,0,0,0, scaleY, 0,0,0,0,0,0, translateX, translateY, scaleZ, 0)*/
+img.transform-3d-matrix{transition: all 1s ease-in-out}
+
+img.transform-3d-matrix:hover
+{
+	transform: matrix3d( 0.07175660428631994, -0.09699054404837933, 0,	
+		                -0.0005036521059873574, -1.1547011149629907,	
+		                 0.12209983243960523, 0, -0.0032479806684548493,
+                         0, 0, 1, 0, 222, 58, 0, 1)
+}
+/*End #18 - 3D Transform - Matrix 3D*/
+
+
+
+/*Start #19 - 3D Transform - Perspective*/
+img.perspective
+{
+	transition: all 1s ease-in-out; 
+	/*transform: translateZ(100px)*/
+}
+/*perspective is the distance betwwen the element and the user*/
+/*the 3rd diamension of the element(child) can't be more than the perspective of the parent()it will disapear*/
+img.perspective:hover{transform: translateZ(100px)}
+
+/*When The Perspective Increase The Size Of The Element Decrease And The opposite is true
+(In the case of the stability of the third dimension)*/
+/*Perspective Origin Is The Vanshing Point Where The Viewer Look To In The Elelment*/
+/*Perspective Origin Values: [X , Y] = [50% , 50%] = [px, px] = [left, right, center, top, bottom]*/
+.container
+{
+	float: left;
+	width: 50%;
+	width:400px;
+	height: 630px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 0
+}
+
+.img-container-a, .img-container-b, .img-container-c
+{
+	 height: 183px;
+	 margin: 20px auto;
+	 padding: 0;
+	 background-color: #EEE;
+	 border: 1px solid #CCC;
+	 float: none;
+	 width: 361px
+}
+
+/*Left=0 , Center=50% , Right=100%*/
+.img-container-a{perspective: 500px; perspective-origin: 50% 50%}
+
+.img-container-b{perspective: 300px; perspective-origin: center}
+
+.img-container-c{perspective: 200px; perspective-origin: center}
+
+.container p
+{
+	text-align: center;
+	margin: 0;
+	padding: 0
+}
+/*End #19 - 3D Transform - Perspective*/
+
+
+
+/*Start #20 - 3D Transform - Transform Origin*/
+.transform-origin{transition: all 1s ease-in-out}
+
+.transform-origin:hover
+{
+	transform: rotate(360deg);
+	/*Transform Origin Specifies the starting point of the movement*/
+	/*Transform Origin Values (%,%   top,bottom,right,left,center   px)*/
+	transform-origin: top right
+}
+/*End #20 - 3D Transform - Transform Origin*/
+
+
+
+/*Start #20 - 3D Transform - Transform Style*/
+.container-style
+{
+	float: left;
+	width: 50%;
+	width:400px;
+	height: 300px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 20px;
+	perspective: 500px
+}
+.father
+{
+	width: 180px;
+	height: 180px;
+	position: relative;
+	background-color: #080;
+	transition: all .5s ease-in-out;
+	transform: rotateY(20deg);
+	float: none;
+	/*The Default Value Of transform-style: flat;*/
+	/*transform-style: preserve-3d;  preserve The 3D Style*/
+	transform-style: preserve-3d;
+}
+
+.child1
+{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	background-color: #F00;
+	transform: translateZ(50px) rotateY(45deg);
+	float: none;
+	margin: 0
+}
+
+.child2
+{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	background-color: #00F;
+	transform: translateZ(150px) rotateX(45deg);
+	float: none;
+	margin: 0
+}
+/*End #20 - 3D Transform - Transform Style*/
+
+
+
+/*Start #21 - 3D Transform - Backface Visibility*/
+.container-backface
+{
+	width: 400px;
+	height: 264px;
+	perspective: 500px
+}
+.backface-visibility-father
+{
+	padding: 0;
+	background-color:transparent;
+	border: 0;
+	margin: 20px 88px;
+	position: relative;
+	transition: all .5s ease-in-out;
+	transform-style: preserve-3d
+}
+
+.backface-visibility-father:hover
+{
+	transform: rotateY(180deg)
+}
+
+.backface-visibility-father >div
+{
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	color: #FFF;
+	font-size: 20px;
+	text-align: center
+}
+
+.front
+{
+	z-index: 2;
+	background-color: #F00;
+	/*backface-visibility: visible;(Default), hidden*/
+	backface-visibility: hidden;
+	/*This To Fix A problem In Firefox 
+	OR We Can Add backface-visibility:hidden; To Father*/
+	transform: rotateX(0deg);
+}
+
+.back
+{
+	z-index: 1;
+	background-color: #00F;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+/*End #21 - 3D Transform - Backface Visibility*/
+
+
+
+/*Start #22 - 3D Transform - Create Flip Card*/
+.container-card/*from me*/
+{
+	width: 400px;
+	height: 400px;
+	perspective: 1000px
+}
+
+.card-father
+{
+	border: 0;/*from me vs global div*/
+
+	width: 300px;
+	height: 340px;
+	margin: 20px 38px;/*from me vs global div (50px auto Osama)*/
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+	backface-visibility: hidden/*Used to fix problem in firefox*/
+}
+
+.card-father:hover
+{
+	/*Can Use rotateX*/
+	transform: rotateY(180deg);
+}
+
+.card-father >div
+{
+	margin: 0;/*from me vs global div*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #EEE;
+	color: #777;
+	padding: 0;
+	border-radius: 10px;
+	text-align: center
+}
+
+.card-father .card-front
+{
+	z-index: 2;
+	backface-visibility: hidden
+	/*display: none; Used During Styling The Backface Then Cleard*/
+}
+
+.card-father .card-front header
+{
+	background-color: #444;
+	width: 100%;
+	height: 80px;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 55px
+}
+
+.card-father .card-front img
+{
+	display: inline;/*from me vs global img*/
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: relative;
+	top: 25px
+}
+
+.card-father .card-front h4
+{
+	margin-bottom: 5px
+}
+
+.card-father .card-front p
+{
+	margin: auto;
+	width: 90%;
+	line-height: 1.7
+}
+
+.card-father .card-front span
+{
+	display: inline-block;
+	margin-top: 5px;
+	color: #60AC37;
+	font-weight: bold;
+}
+
+.card-father .card-back
+{
+	z-index: 1;
+	/*Can Use rotateX*/
+	transform: rotateY(180deg);
+	/*Used When There Is Problem During Rotation*/
+	backface-visibility: hidden
+}
+
+.card-father .card-back ul
+{
+	list-style: none;
+	padding: 0;
+	line-height: 2
+}
+/*End #22 - 3D Transform - Create Flip Card*/
+
+
+
+/*Start #23 - Background New Features*/
+
+/*#23-1 - background-size*/
+.background-size
+{
+	width: 400px;
+	height: 200px;
+	color: #FFF;
+	/*background-repeat: no-repeat; Can Used As Below*/
+	background: url("../images/wall.jpg") no-repeat;
+	/*background-size: 
+	auto auto(Default Value),
+	(px px),(% %),
+	(contain)==>Img Scaled with limits(fill the smaller size
+			    between width or height & When width and height
+			    are the same size it fill width only
+			    #contain not cut the img)
+	(cover)  ==>Img Scaled  to large without limits But When scaled to small
+				it cut from the img
+				cover More Used Than Contain*/
+	background-size: 100% 100%;
+}
+
+/*#23-2 - background-clip*/
+.background-clip
+{
+	width: 400px;
+	height: 200px;
+	color: #FFF;
+	/*Background cant cover The Outline*/
+	outline: 10px dashed #080;
+	border: 10px dashed #00F;
+	padding: 10px;
+	background: #F00;
+	/*background-clip: 
+					  border-box; ==>Background Start From Border(Default)
+				      padding-box;==>Background Start After Border
+				      content-box;==>Background Start From Content*/
+	background-clip: content-box
+}
+
+/*#23-3 - background-origin*/
+/*The Same As Background-Clip But With Img*/
+.background-origin
+{
+	width: 400px;
+	height: 200px;
+	color: #FFF;
+	padding: 30px;
+	border: 10px dotted #F00;
+	background: url("../images/wall.jpg") no-repeat;
+	/*Can Use Multiple Background Properities To Achive What I Need*/
+	background-size: cover;
+	/*background-origin: 
+					  border-box; ==>Background Start From Border(Default)
+				      padding-box;==>Background Start After Border
+				      content-box;==>Background Start From Content*/
+    /*Img Move Only From Top & Left And When Used background-size: cover;
+      It Move from Right But Stll Dont Move From Bottom..Other Propereties
+      Will Fix This In Comming Lessons*/
+	background-origin: content-box
+}
+/*End #23 - Background New Features*/
+
+
+
+/*Start #24 - Overflow New Features*/
+.overflow
+{	/*overflow:visible;(Default)*/
+	overflow-y: scroll;
+	overflow-x: hidden
+}
+/*End #24 - Overflow New Features*/
+
+
+
+/*Start #25 - Resize*/
+.resize
+{
+	overflow-y: scroll;
+	overflow-x: scroll;
+	/*Resize Values: none;(Default), both, vertical, horizontal*/
+	/*The Default Value None Used For Example To Clear 
+	  The Default Resize From Textarea*/
+	/*Resize Properities Used With Textarea*/
+	/*Resize Not Supported In IE*/
+	resize: horizontal;
+}
+/*End #25 - Resize*/
+
+
+
+/*Start #26 - Opacity*/
+.opacity
+{
+	/*Opacity Values from 0 to 1*/
+	/*Opacity Affect The inside elementa also*/
+	/*flter: alpha(opacity=50)==>This Used To Activate
+	  Opacity in IE(50 mean .5  // 90 mean .9)*/
+	/*We Can Use {opacity: 0;} Instead Of {visibility:hidden;}*/
+	opacity: 0.4
+}
+/*End #26 - Opacity*/
+
+
+
+/*Start #27 - Flex Direction | Flex Wrap*/
+/*Flex Mean Flexablity*/
+/*Devided Into Properetes For parent(Container) & For Child(Inner Elements)*/
+.flex-direction-wrap
+{
+	height: auto;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*flex-direction: #row; (Default ACC. to direction of page)
+	                  #row-reverse; (reverse Affect The Div but 
+	                                not affect on worde inside it)
+                      #column; #column-reverse*/
+	flex-direction: row;
+	/*flex-wrap: #nowrap; (Default)
+				 #wrap; (Make Wrap When Neccesary AS parent width 
+				        smaller than inner Divs)
+		         #wrap-reverse;(The Same As Wrap But Reversed)*/
+	flex-wrap: nowrap
+}
+
+.flex-direction-wrap >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-direction-wrap >div:first-of-type{background-color: #080}
+.flex-direction-wrap >div:nth-of-type(2){background-color: #F00}
+.flex-direction-wrap >div:last-of-type{background-color: #00F}
+/*End #27 - Flex Direction | Flex Wrap*/
+
+
+
+/*Start #28 - Flex Flow | Justify Content*/
+/*Flex Flow*/
+.flex-flow
+{
+	height: auto;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+
+	/*flex-flow: Is The Short Hand Code For flex-direction: flex-wrap:*/
+	/*flex-flow: row, nowrap(Default)*/
+	flex-flow: row nowrap
+}
+
+.flex-flow >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-flow >div:first-of-type{background-color: #080}
+.flex-flow >div:nth-of-type(2){background-color: #F00}
+.flex-flow >div:last-of-type{background-color: #00F}
+
+
+/*Justify Content*/
+.flex-justify
+{
+	height: auto;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*justify-content: flex-start;
+					   flex-end;
+					   center;
+					   space-between;
+					   space-around;*/
+	justify-content: space-around;
+}
+
+.flex-justify >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-justify >div:first-of-type{background-color: #080}
+.flex-justify >div:nth-of-type(2){background-color: #F00}
+.flex-justify >div:last-of-type{background-color: #00F}
+/*End #28 - Flex Flow | Justify Content*/
+
+
+
+/*Start #29 - Align Items | Align Content*/
+
+/*Align- Items*/
+.flex-align-items
+{
+	height: 300px;/*From me Aginst Global Div*/
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*This Properety Respect Height&Width Of The Element*/
+	/*align-itmes Affect on Itemes Inside The Div(move top&bottom) BUT
+	  justify-content Affect On The Div(move right&left)*/
+	/*align-items: stretch(Default);
+				   flex-start;
+				   flex-end;
+				   center;
+				   baseline;*/
+	align-items: flex-start;
+}
+
+.flex-align-items >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: ;
+	width: 109px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-align-items >div:first-of-type{background-color: #080}
+.flex-align-items >div:nth-of-type(2){background-color: #F00}
+.flex-align-items >div:last-of-type{background-color: #00F}
+
+/*Align Content*/
+.flex-align-content
+{
+	height: 500px;
+	width: 400px;
+	padding: 10px;
+	/*display: flex; This Make The Inner Divs Inline*/
+	/*display: inline-flex; This allow me to put another element
+	  beside the parenet But This Element Must Be inline-block*/
+	display: flex;
+	/*This To Can Test Align Content*/
+	flex-wrap: wrap;
+	/*Effect Of align content Apear When There Is No Enough Width*/
+	/*align-content Do The Same As justify-content But Vertical*/
+	/*align-content: stretch(Default);
+					 center;
+					 flex-start;
+					 flex-end;
+					 space-between;
+					 space-around;*/
+	align-content: space-around;
+}
+
+.flex-align-content >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: ;
+	width: 344px;
+	color: #FFF;
+	padding: 10px
+}
+
+.flex-align-content >div:first-of-type{background-color: #080}
+.flex-align-content >div:nth-of-type(2){background-color: #F00}
+.flex-align-content >div:last-of-type{background-color: #00F}
+/*End #29 - Align Items | Align Content*/
+
+
+
+/*Start #30 - Order | Flex Grow | Flex Shrink*/
+/*Order*/
+.order
+{
+	height: 200px;
+	width: 400px;
+	padding: 10px;
+	display: flex
+}
+
+.order >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 200px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px
+}
+
+.order .one  {background-color: #080; order: 3}
+.order .two  {background-color: #F00; order: 1}
+.order .three{background-color: #F0F; order: 4}
+.order .four {background-color: #00F; order: 2}
+
+/*Flex Grow*/
+.grow
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Grow*/
+	display: flex;
+	border: 0/*To Can Test Grow*/
+}
+
+.grow >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px;
+	flex-grow: 0/*Default Value*/
+}
+/*Grow Start When There Is Decrease In The Size Of The 
+  Inner Divs Therefore The Divs With The Highest Flex
+  Grow Value Will Start To Grow More Than Other Divs 
+  That With Lower Flex Grow Value(Divs With Lower Flex 
+  Grow Value Will Decrease In Size)*/
+
+  /*Grow Start When There Is Increase In The Size Of 
+  The Container Therefore The Divs With The Highest Flex
+  Grow Value Will Start To Grow More Than Other Divs 
+  That With Lower Flex Grow Value*/
+.grow .one  {background-color: #080; flex-grow: 3}
+.grow .two  {background-color: #F00; flex-grow: 2}
+.grow .three{background-color: #F0F; flex-grow: 1}
+.grow .four {background-color: #00F; flex-grow: 0}
+
+/*Flex Shrink*/
+.shrink
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Shrink*/
+	display: flex;
+	border: 0/*To Can Test Shrink*/
+
+}
+
+.shrink >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: 100px;
+	color: #FFF;
+	padding: 10px;
+	flex-shrink: 1/*Default Value*/
+}
+/*Shrink Is The Opposite Of Grow*/
+/*flex-shrink: 0 => Prevent Shrink*/
+.shrink .one  {background-color: #080; flex-shrink: 3}
+.shrink .two  {background-color: #F00; flex-shrink: 2}
+.shrink .three{background-color: #F0F; flex-shrink: 1}
+.shrink .four {background-color: #00F; flex-shrink: 0}
+/*End #30 - Order | Flex Grow | Flex Shrink*/
+
+
+
+/*Start #31 - Flex Basis | Shorthand*/
+/*Flex Basis*/
+.basis
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Basis*/
+	display: flex;
+	border: 0/*To Can Test Basis*/
+
+}
+
+.basis >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: auto;/*I Deleted The width To Can Test Basis*/ 
+	color: #FFF;
+	padding: 10px
+}
+/*The Size Of Container Must Be Sutable To New Sizes From Basis*/
+/*When The Size Of The Container Is Smaller Than 
+  The Total Size Of The Inner Divs==>The Flex Box
+  Resize The Inner Divs To New Smaller Size Even Smaller
+  Than Size Given By Basis*/
+
+/*The flex-basis CSS property sets the initial main size
+  of a flex item. It sets the size of the content box unless
+   otherwise set with box-sizing.*/
+
+/*Note: in case both flex-basis (other than auto) and width 
+  (or height in case of flex-direction: column) are set for 
+  an element, flex-basis has priority.*/
+/*Default Value auto=>The Sam Value From Flex Box*/
+/*The Size Of The Word Inside The Div Keep A size For
+  Itself(Can't Break A word)*/
+.basis .one  {background-color: #080; flex-basis:70px}
+.basis .two  {background-color: #F00; flex-basis:80px}
+.basis .three{background-color: #F0F; flex-basis:100px}
+.basis .four {background-color: #00F; flex-basis:150px}
+
+/*Shorthand*/
+.shorthand
+{
+	height: 200px;
+	width: 400px;
+	padding: 0;/*To Can Test Basis*/
+	display: flex;
+	border: 0/*To Can Test Basis*/
+
+}
+
+.shorthand >div
+{
+	float: none;/*From me Aginst Global Div*/
+	border: 0;/*From me Aginst Global Div*/
+	margin: 0;/*From me Aginst Global Div*/
+	height: auto;/*From me Aginst Global Div*/
+	max-height: 150px;
+	width: 50px; /*To Can Tes Grow & Shrink*/
+	color: #FFF;
+	padding: 10px
+}
+
+/*flex:  0      1     auto; (Default Value)*/
+/*flex: Grow  Shrink  Basis;*/
+/*To Test Basis Must Stop Grow & Set Width To auto*/
+.shorthand .one  {background-color: #080; flex: 0 1 auto}
+.shorthand .two  {background-color: #F00; flex: 2 0 auto}
+.shorthand .three{background-color: #F0F; flex: 0 1 auto}
+.shorthand .four {background-color: #00F; flex: 0 1 auto}
+/*End #31 - Flex Basis | Shorthand*/
+
+
+
+/*Start #32 - Transition - Intro*/
+
+/*transition: <Property> | <Duration> | <Timing Function> | <Delay>*/
+/*In Case Of Same Duration Use all*/
+/*Must Use Property & Duration*/
+.transition {transition: width 3s, background-color 6s}
+
+.transition:hover {width: 400px; background-color: #00F}
+/*End #32 - Transition - Intro*/
+
+
+
+/*Start #33 - Transition - Property | Duration*/
+.transition-property-duration 
+{
+	/*transition-property: all(Default Value), none(For Reset)*/
+	/*If We Wrote Only Background Not Background Color=>
+	  The Transition Will Affect All Background Properties*/
+	transition-property: width, background-color;
+	/*transition-duration: 0s(Default Value)*/
+	/*s=seconde, ms=milli seconde*/
+	/*I Can Use Duration For Each Property In The Order*/
+	transition-duration: 2000ms, 6s
+}
+
+
+.transition-property-duration:hover
+{
+	width: 400px;
+    background-color: #00F
+}
+/*End #33 - Transition - Property | Duration*/
+
+
+
+/*Start #34 - Transition - Timing Function | Delay*/
+/*Timing Function*/
+
+/*The transition-timing-function property specifies 
+  the speed curve of the transition effect.*/
+
+/*This property allows a transition effect to
+  change speed over its duration.*/
+.transition-timing-function 
+{
+	height: auto;/*Aginst Global Div*/
+	width: 400px
+}
+
+.transition-timing-function p
+{
+	background-color: #F00;
+	margin-bottom: 10px;
+	color: #FFF;
+	width: 120px;
+	padding: 10px;
+	transition-property: width;
+	transition-duration: 3s
+}
+
+.transition-timing-function p:first-of-type
+/*Ease; Specifies a transition effect with 
+  a slow start, then fast, then end slowly 
+  (equivalent to cubic-bezier(0.25,0.1,0.25,1))*/
+{transition-timing-function: ease}
+
+
+.transition-timing-function p:nth-of-type(2)
+/*Linear; Specifies a transition effect 
+  with the same speed from start to end 
+  (equivalent to cubic-bezier(0,0,1,1))*/
+{transition-timing-function: linear}
+
+
+.transition-timing-function p:nth-of-type(3)
+/*Ease-in; Specifies a transition effect witha slow start
+  (equivalent to cubic-bezier(0.42,0,1,1))*/
+{transition-timing-function: ease-in}
+
+
+.transition-timing-function p:nth-of-type(4)
+/*Ease-out; Specifies a transition effect with a slow end 
+  (equivalent to cubic-bezier(0,0,0.58,1))*/
+{transition-timing-function: ease-out}
+
+
+.transition-timing-function p:last-of-type
+/*Ease-in-out; Specifies a transition effect with a slow start and end
+  (equivalent to cubic-bezier(0.42,0,0.58,1))*/
+{transition-timing-function: ease-in-out}
+
+/*NP: I Can Formate My Own Transition-Timing-Function
+  By Using Cubic-Bezier As Shown In Commentes Above.
+  In Links There Is A Website Link That Help In Formatting
+  Cubic-Bezier*/
+
+.transition-timing-function:hover p {width: 200px}
+
+
+/*Transition-Timing-Function-Steps*/
+.steps
+{
+	height: auto;/*Aginst Global Div*/
+	width: 400px
+}
+
+.steps p
+{
+	background-color: #F00;
+	margin-bottom: 10px;
+	color: #FFF;
+	width: 120px;
+	padding: 10px;
+	transition-property: width, background-color;
+	transition-duration: 3s
+}
+/*step-start ==> Equivalent to steps(1, start)
+  step-end	 ==> Equivalent to steps(1, end)
+  steps(int,start|end) ==> Specifies a stepping function,with two parameters. 
+  The first parameter specifies the number of intervals in the function. 
+  It must be a positive integer (greater than 0). 
+  The second parameter, which is optional, is either the value "start" or "end", 
+  and specifies the point at which the change of values occur within the interval. 
+  If the second parameter is omitted, it is given the value "end"*/
+.steps p:first-of-type 
+{transition-timing-function: steps(4, start)}
+
+.steps p:last-of-type 
+{transition-timing-function: steps(4, end)}/*End Is Default Value*/
+
+.steps:hover p {width: 200px; background-color: #00F}
+
+
+/*Delay*/
+.delay
+{
+	height: auto;/*Aginst Global Div*/
+	width: 400px
+}
+
+.delay p
+{
+	background-color: #F00;
+	margin-bottom: 10px;
+	color: #FFF;
+	width: 120px;
+	padding: 10px;
+	transition-property: width;
+	transition-duration: 3s;
+	transition-timing-function: ease
+}
+
+.delay p:first-of-type  {transition-delay: 0s}/*Default Value*/
+
+.delay p:nth-of-type(2) {transition-delay: 1s}
+
+.delay p:nth-of-type(3) {transition-delay: 2s}
+
+.delay p:nth-of-type(4) {transition-delay: 3s}
+
+.delay p:last-of-type   {transition-delay: 4s}
+
+.delay:hover p {width: 200px}
+/*End #34 - Transition - Timing Function | Delay*/
+
+
+
+/*Start #35 - Transition - Examples*/
+.container-examples
+{
+	width: 400px;
+	height: auto;
+	background-color: transparent;
+	border: 0;
+	padding: 0
+}
+.transition-examples1
+{
+	margin-left: 0;
+	width: 180px;
+	height: 180px;
+	padding-top: 73px;
+	line-height: 22px;
+	text-align: center;
+	background-color: #2c3e50;
+	color: #FFF;
+	transition: all .5s ease-in-out;
+	opacity: 1
+}
+
+.transition-examples1:hover {opacity: .5}
+
+
+.transition-examples2
+{
+	margin-right: 0;
+	width: 180px;
+	height: 180px;
+	padding-top: 73px;
+	line-height: 22px;
+	text-align: center;
+	background-color: #2c3e50;
+	color: #FFF;
+	transition: all .5s ease-in-out;
+}
+
+.transition-examples2:hover {background-color: #3497db}
+
+
+.transition-examples3
+{
+	margin-left: 0;
+	width: 180px;
+	height: 180px;
+	line-height: 160px;
+	text-align: center;
+	background-color: #2c3e50;
+	color: #FFF;
+	transition: all .5s ease-in-out;
+}
+
+.transition-examples3:hover {transform: scale(.8)}
+
+.transition-examples4
+{
+	margin-right: 0;
+	width: 180px;
+	height: 180px;
+	line-height: 160px;
+	text-align: center;
+	background-color: #2c3e50;
+	color: #FFF;
+	transition: all .5s ease-in-out;
+}
+
+.transition-examples4:hover {transform: rotateZ(40deg)}
+
+.transition-examples5
+{
+	margin-left: 0;
+	width: 180px;
+	height: 180px;
+	line-height: 160px;
+	text-align: center;
+	background-color: #2c3e50;
+	color: #FFF;
+	transition: all .5s ease-in-out;
+}
+
+.transition-examples5:hover {border-radius: 50%}
+
+
+.transition-examples6
+{
+	margin-right: 0;
+	width: 180px;
+	height: 180px;
+	padding-top: 73px;
+	line-height: 22px;
+	text-align: center;
+	background-color: #2c3e50;
+	color: #FFF;
+	transition: all .5s ease-in-out;
+}
+
+.transition-examples6:hover {box-shadow: inset 0 0 0 10px #3498db}
+/*End #35 - Transition - Examples*/
+
+
+
+/*Start #36 - Multi Columns - Column Count, Column Gap*/
+.column-count-gap
+{
+	width: 400px;
+	height: auto;
+	column-count: 3;/*auto Is The Default Value*/
+	column-gap: 41px/*normal Is The Default Value*/
+}
+/*End #36 - Multi Columns - Column Count, Column Gap*/
+
+
+
+/*Start #37 - Multi Columns - Column Rule, Column Width*/
+.column-rule-width
+{
+	width: 400px;
+	height: auto;
+	column-count: 3;
+	column-gap: 40px;
+	/*column-rule:=> Is The Border Between The Columns*/
+	/*column-rule: Width   Style  color (Values)*/
+	/*column-rule: medium  none   color (Default Value)*/
+	column-rule: 2px solid #080;/*This Is Shorthand Code*/
+	/*This Is The Detailed Code*/
+	column-rule-width: 2px;
+	column-rule-style: solid;
+	column-rule-color: #080;
+	/*column-width: =>Can Affect On The Number Of Column*/
+	/*The column-width property specifies the column width.
+
+      The number of columns will be the minimum number of 
+      columns needed to show all the content across the element.
+
+      Column-width is a flexible property. Think of column-width 
+      as a minimum width suggestion for the browser. 
+      Once the browser cannot fit at least two columns 
+      at your specified width then the columns will stop and 
+      drop into a single column.*/
+	column-width: 99px/*This Is The Max. Width That Keep 3 Column*/
+}
+/*End #37 - Multi Columns - Column Rule, Column Width*/
+
+
+
+/*Start #38 - Multi Columns - Column Span, Column Fill, Shorthand*/
+.column-span-fill
+{
+	width: 400px;
+	height: auto;
+	column-count: 3;
+	column-gap: 40px;
+	column-rule: 2px solid #080;
+	/*column-fill:=> Only Supported In Firefox*/
+	/*The column-fill property specifies how to fill columns, balanced or not.*/
+
+	/*Value	        Description
+
+      balance	    (Default value) Fills each column with about the same amount 
+                    of content, but will not allow the columns to be taller than 
+                    the height (so, columns might be shorter than the height as 
+                    the browser distributes the content evenly horizontally)
+
+      auto	        Fills each column until it reaches the height, and do this 
+                    until it runs out of content (so, this value will not 
+                    necessarily fill all the columns nor fill them evenly)*/
+	column-fill: auto;
+	/*columns: <width> <count>*/
+	/*columns:   auto   auto*/
+	/*Property Values:-
+      Value	        Description
+
+      auto	        Default value. Sets both the column-width and column-count to "auto"
+      column-width	Defines the minimum width for each column
+      column-count	Defines the maximum number of columns*/
+    /*UNCOMMENT & TEST*/
+	/*columns: 100px 2*/
+}
+
+/*Default Value Is 1*/
+/*Not Supported In Firefox*/
+.column-span-fill h2 {column-span: all}
+/*End #38 - Multi Columns - Column Span, Column Fill, Shorthand*/
+
+
+
+
+/*Start #39 - Animation - Intro & Keyframes*/
+.animation-container
+{
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+
+.animation-container >div
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0;
+	position: absolute
+}
+
+.first
+{
+	background-color: #F00;
+	animation: moving 3s 300 linear
+}
+
+.second
+{
+	background-color: #00F;
+	animation: moving 5s 200 linear
+}
+
+.third
+{
+	background-color: #080;
+	animation: moving2 3s 300 linear
+}
+
+.fourth
+{
+	background-color: #000;
+	animation: moving2 5s 200 linear
+}
+
+@keyframes moving
+{
+	0%   {top: 0;     left: 0    }
+
+	25%  {top: 375px; left: 0    }
+
+	50%  {top: 375px; left: 375px; border-radius: 0}
+
+	75%  {top: 0;     left: 375px}
+
+	100% {top: 0;     left: 0    }
+}
+
+@keyframes moving2
+{
+	0%   {top: 50px;  left: 50px }
+
+	25%  {top: 325px; left: 50px }
+
+	50%  {top: 325px; left: 325px}
+
+	75%  {top: 50px;  left: 325px; border-radius: 0}
+
+	100% {top: 50px;  left: 50px }
+}
+/*End #39 - Animation - Intro & Keyframes*/
+
+
+
+
+/*Start #40 - Animation - Name, Duration*/
+.animation-container-name-duration
+{
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+
+.animation-container-name-duration >div
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+	background-color: #F00;
+	/*animation-name:none;(Default Value)*/
+	animation-name: moving-a;
+	/*animation-duration: s or ms*/
+	animation-duration: 5s;
+	/*This Is The Shorthand Code*/
+	animation: moving-a 5s 
+}
+
+/*Keyframes Syntax:
+				   #Animation Name =>Required
+				   #{From(0%) To (100%) OR 0%, 10%, 20%, 50%, 100%}
+				   #Css Attribute*/
+@keyframes moving-a
+{
+	/*We Can Group btween Phases*/
+	0%, 100% {top: 0;     background-color: #F00}
+
+	10%      {top: 350px; background-color: #00F}
+
+	20%      {top: 100px; background-color: #080}
+
+	30%      {top: 350px; background-color: #F00}
+
+	40%      {top: 150px; background-color: #00F}
+
+	50%      {top: 350px; background-color: #080}
+
+	60%      {top: 200px; background-color: #F00}
+
+	70%      {top: 350px; background-color: #00F}
+
+	80%      {top: 250px; background-color: #080}
+
+	90%      {top: 350px; background-color: #00F}
+}
+/*End #40 - Animation - Name, Duration*/
+
+
+
+
+/*Start #41 - Animation - Iteration Count, Direction */
+.animation-container-iteration-direction
+{
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+
+.animation-container-iteration-direction >div
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+	background-color: #F00;
+	animation-name: moving-b;
+	animation-duration: 5s;
+	/*Default Value Is 1*/
+	animation-iteration-count: infinite;
+	/*Default Value Is normal*/
+	/*reverse, alternate(When Finish Start From Reverse),
+	  alternate-reverse*/
+	animation-direction: alternate-reverse;
+	/*This Is The Shorthand Code*/
+	animation: moving-b 5s infinite alternate-reverse
+}
+
+@keyframes moving-b
+{
+	0%, 100% {top: 0;     background-color: #F00}
+
+	10%      {top: 350px; background-color: #00F}
+
+	20%      {top: 100px; background-color: #080}
+
+	30%      {top: 350px; background-color: #F00}
+
+	40%      {top: 150px; background-color: #00F}
+
+	50%      {top: 350px; background-color: #080}
+
+	60%      {top: 200px; background-color: #F00}
+
+	70%      {top: 350px; background-color: #00F}
+
+	80%      {top: 250px; background-color: #080}
+
+	90%      {top: 350px; background-color: #00F}
+}
+/*End #41 - Animation - Iteration Count, Direction */
+
+
+
+
+/*Start #42 - Animation - Delay, Fill Mode*/
+.animation-container-delay-fillmode
+{
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+
+.animation-container-delay-fillmode >div
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 10px;
+	color: #FFF;
+	position: absolute;
+	animation-name: moving-c;
+	animation-duration: 4s;
+	animation-iteration-count: 2;
+	animation-direction: normal
+}
+
+.animation-container-delay-fillmode1
+{
+	background-color: #F00;
+	/*Default Value Is 0*/
+	animation-delay: 2s;
+	/*Default Value Is none;
+	  forwards(Stop The Animation To The Last keyframes), */
+	animation-fill-mode: backwards
+}
+
+.animation-container-delay-fillmode2
+{
+	background-color: #00F;
+	/*Default Value Is 0*/
+	animation-delay: 4s;
+	/*backwards(Take The Firts Keyframes befor Start),
+	  both(Start With Forwards & End With Backwards)*/
+	animation-fill-mode: both
+}
+
+@keyframes moving-c
+{
+	0%   {top: 0;     background-color: #333}
+
+	10%  {top: 350px; background-color: #00F}
+
+	20%  {top: 100px; background-color: #080}
+
+	30%  {top: 350px; background-color: #F00}
+
+	40%  {top: 150px; background-color: #00F}
+
+	50%  {top: 350px; background-color: #080}
+
+	60%  {top: 200px; background-color: #F00}
+
+	70%  {top: 350px; background-color: #00F}
+
+	80%  {top: 250px; background-color: #080}
+
+	90%  {top: 350px; background-color: #00F}
+
+	100% {top: 350px; background-color: #333}
+}
+/*End #42 - Animation - Delay, Fill Mode*/
+
+
+
+
+/*Start #43 - Animation - Play State, Timing Function*/
+.animation-container-play-state-timing-function
+{
+	width: 400px;
+	height: 400px;
+	position: relative
+}
+
+.animation-container-play-state-timing-function1
+{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 5px;
+	background-color: #F00;
+	color: #FFF;
+	position: absolute;
+	animation-name: moving-d;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-fill-mode: none;
+	/*Default Value Is Running
+	  paused; => used to stop animation
+	  (can use with Js)*/
+	animation-play-state: running;
+	/*The Same As Transition*/
+	animation-timing-function: ease;
+}
+
+.animation-container-play-state-timing-function2
+{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 85px;
+	background-color: #00F;
+	color: #FFF;
+	position: absolute;
+	animation-name: moving-d;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-fill-mode: none;
+	/*Default Value Is Running
+	  paused; => used to stop animation
+	  (can use with Js)*/
+	animation-play-state: running;
+	/*The Same As Transition*/
+	animation-timing-function: ease-in
+}
+
+.animation-container-play-state-timing-function3
+{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 165px;
+	background-color: #000;
+	color: #FFF;
+	position: absolute;
+	animation-name: moving-d;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-fill-mode: none;
+	/*Default Value Is Running
+	  paused; => used to stop animation
+	  (can use with Js)*/
+	animation-play-state: running;
+	/*The Same As Transition*/
+	animation-timing-function: ease-out
+}
+
+.animation-container-play-state-timing-function4
+{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 245px;
+	background-color: #080;
+	color: #FFF;
+	position: absolute;
+	animation-name: moving-d;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-fill-mode: none;
+	/*Default Value Is Running
+	  paused; => used to stop animation
+	  (can use with Js)*/
+	animation-play-state: running;
+	/*The Same As Transition*/
+	animation-timing-function: ease-in-out
+}
+
+.animation-container-play-state-timing-function5
+{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 0;
+	top: 10px;
+	left: 323px;
+	background-color: #F0F;
+	color: #FFF;
+	position: absolute;
+	animation-name: moving-d;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-fill-mode: none;
+	/*Default Value Is Running
+	  paused; => used to stop animation
+	  (can use with Js)*/
+	animation-play-state: running;
+	/*The Same As Transition*/
+	animation-timing-function: linear
+}
+
+@keyframes moving-d
+{
+	0%{top: 10px}
+	100%{top: 325px}
+}
+/*End #43 - Animation - Play State, Timing Function*/
+
+
+
+
+/*Start #44 - Animation - Shorthand*/
+.animation-container-shorthand
+{
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+
+.animation-container-shorthand >div
+{
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 50%;
+	background-color: #F00;
+	top: 10px;
+	left: 10px;
+	color: #FFF;
+	position: absolute;
+
+	/* Animation Shorthand Code:   Default Values:
+       [Animation Name]            ==>none;
+       [Animation Duration]        ==>0;
+       [Animation Timing Function] ==>esae;
+       [Animation Delay]           ==>0;
+       [Animation Iteration]       ==>1;
+       [Animation Direction]       ==>normal;
+       [Animation Fill Mode]       ==>none;
+       [Animation Play State]      ==>runing;
+    */
+    animation: moving-e 5s ease 1s infinite normal none running
+}
+
+@keyframes moving-e
+{
+	0%   {top: 10px;  left: 10px }
+
+	25%  {top: 340px; left: 10px }
+
+	50%  {top: 340px; left: 340px}
+
+	75%  {top: 10px;  left: 340px}
+
+	100% {top: 10px;  left: 10px }
+}
+/*End #44 - Animation - Shorthand*/
+
+
+
+
+/*Start #45 - Animation - Create Swing Dropdown*/
+.animation-container-swing-dropdown-all
+{
+	width: 400px;
+	height: 455px
+}
+.animation-container-swing-dropdown
+{
+	width: 380px;
+	height: 50px;
+	margin: 0;
+	margin-bottom: 100px;
+	padding: 0;
+	font-weight: bold;
+	text-align: center;
+	border: 0;
+	background-color: transparent;
+	float: none
+}
+
+.animation-container-swing-dropdown >div
+{
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	width: 380px;
+	line-height: 50px;
+	position: relative;
+	float: none;
+	color: #FFF;
+	z-index: 2
+}
+
+.animation-container-swing-dropdown a
+{
+	float: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	background-color: #333;
+	color: #FFF;
+	text-decoration: none;
+	position: relative;
+	top: -50px;
+	z-index: 1
+}
+
+/*Normal Hover*/
+.animation-container-swing-dropdown:hover a
+{
+	top: 0
+}
+
+.normal:before
+{
+	display: block;
+	content: "Normal Hover"
+}
+
+.normal >div
+{
+	background-color: #62C8F8
+}
+
+
+
+/*Transition Hover*/
+.transition-d:before
+{
+	display: block;
+	content: "Transition Hover"
+}
+
+.transition-d >div
+{
+	background-color: #3B5998
+}
+
+.transition-d a
+{
+	transition: all .5s ease-in-out
+}
+
+
+
+/*Animation Hover*/
+.animation:before
+{
+	display: block;
+	content: "Animation Hover"
+}
+
+.animation >div
+{
+	background-color: #C8302A
+}
+
+.animation a
+{
+	transition: all .5s ease-in-out
+}
+
+.animation:hover a
+{
+	transform-origin: top;/*To Prevent White Line 
+	                        Above The Link Box*/
+	animation: swinging 1.5s ease-in-out
+}
+
+@keyframes swinging
+{
+	0%  {transform: rotateX(-50deg)}
+	20% {transform: rotateX(50deg)}
+	40% {transform: rotateX(-30deg)}
+	60% {transform: rotateX(30deg)}
+	80% {transform: rotateX(-30deg)}
+	100%{transform: rotateX(0deg)}
+}
+/*End #45 - Animation - Create Swing Dropdown*/
+
+
+
+
+/*Start #46 - Animation - Create Wave Audio Loading*/
+.animation-container1-wave-loading
+{
+	width: 400px;
+	height: 300px
+}
+
+.animation-container2-wave-loading
+{
+	height: 50px;
+	border: 0;
+	float: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 165px 90px;
+	position: relative
+}
+
+.animation-container2-wave-loading span
+{
+	display: block;
+	position: absolute;
+	bottom: 50px;
+	height: 25px;/*If There Is No Height
+	               If The Animation Stopped
+	               It Will Disapear*/
+	width: 38.4px;
+	background-color: #9B59B6;
+	animation: waving 1.5s infinite ease-in-out
+}
+
+.animation-container2-wave-loading span:nth-of-type(2)
+{
+	left: 40.4px;
+	animation-delay: .2s
+}
+
+.animation-container2-wave-loading span:nth-of-type(3)
+{
+	left: 80.8px;
+	animation-delay: .4s
+}
+
+.animation-container2-wave-loading span:nth-of-type(4)
+{
+	left: 121.2px;
+	animation-delay: .6s
+}
+
+.animation-container2-wave-loading span:last-of-type
+{
+	left: 161.6px;
+	animation-delay: .8s
+}
+
+@keyframes waving
+{
+	0%, 50%, 100% 
+	{
+		height: 5px; 
+		transform: translateY(0);
+		background-color: #9B59B6
+	}
+
+
+	25%
+	{
+		height: 60px; 
+		transform: translateY(15px);
+		background-color: #3498D6
+	}
+}
+/*End #46 - Animation - Create Wave Audio Loading*/
+
+
+
+
+/*Start #47 - Animation - Create Snake Loading*/
+.animation-container1-snake-loading
+{
+	width: 400px;
+	height: 300px
+}
+
+.animation-container2-snake-loading
+{
+	height: 50px;
+	width: 100px;
+	border: 0;
+	float: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 165px 140px;
+	position: relative
+}
+
+.animation-container2-snake-loading span
+{
+	display: block;
+	position: absolute;
+	bottom: 50px;
+	height: 20px;/*If There Is No Height
+	               If The Animation Stopped
+	               It Will Disapear*/
+	width: 20px;
+	border-radius: 50%;
+	background-color: #3498DB;
+	opacity: .5;
+	animation: snake 1.5s infinite ease-in-out
+}
+
+
+.animation-container2-snake-loading span:nth-of-type(2)
+{
+	left: 20px;
+	animation-delay: .2s
+}
+
+.animation-container2-snake-loading span:nth-of-type(3)
+{
+	left: 40px;
+	animation-delay: .4s
+}
+
+.animation-container2-snake-loading span:nth-of-type(4)
+{
+	left: 60px;
+	animation-delay: .6s
+}
+
+.animation-container2-snake-loading span:last-of-type
+{
+	left: 80px;
+	animation-delay: .8s
+}
+
+@keyframes snake
+{
+	0%, 100%
+	{
+		opacity: .3;
+		transform: translateY(0);
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
+	}
+
+
+	50%
+	{
+		opacity: 1;
+		transform: translateY(-10px);
+		background-color: #080;
+		box-shadow: 0 20px 3px rgba(0, 0, 0, .05)
+	}
+}
+/*End #47 - Animation - Create Snake Loading*/
+
+
+
+
+/*Start #48 - Animation - Animation Outro*/
+/*No Need To CSS3 In This Course*/
+/*End #48 - Animation - Animation Outro*/
+
+
+
+
+/*Start #49 - Selectors - Next, Start With, End With, Contains*/
+.selector-full-container
+{
+	width: 502px;
+    height: auto;
+    border: 0;
+    background-color: transparent;
+    margin: 0;
+    padding: 0
+}
+/*Next Selector*/
+.container-selector1:before
+{
+	content: 'Next Selector(~)';
+	font-weight: bold;
+	text-decoration: underline
+}
+
+.container-selector1
+{
+	width: 200px;
+	height: 225px
+}
+
+.selectors-next
+{
+	height: 100px;
+	width: 178px;
+	margin: 0 0 20px 
+}
+/*This Make Change To (Every Span After P In The Same Parent) 
+  In The Container (and It's Contenet)*/
+.container-selector1 p~span{color: #F00}
+
+
+/*Start With Selector*/
+.container-selector2:before
+{
+	content: 'Start With Selector(^)';
+	font-weight: bold;
+	text-decoration: underline
+}
+
+.container-selector2
+{
+	width: 200px;
+	height: 225px
+}
+
+.selector-start-with
+{
+	height: 100px;
+	width: 178px;
+	margin: 0 0 20px 
+}
+
+/*If I Don't Select Div => This Will Make Change To all The Body*/
+/*This Will Make Change To All Class Start With Letter(s) Whatever
+  Was The Name Of This Class In HTML File*/
+/*This Selector Used With Any Other Attributes Than [Class=""]*/
+.container-selector2 [class^="s"]{color: #F00}
+/*<p class="poma">Hello P</p> => This Is The Class 
+  Name In HTML File*/
+.selector-start-with [class^="p"]{color: #00F}
+
+
+/*End With Selector*/
+.container-selector3:before
+{
+	content: 'End With Selector($)';
+	font-weight: bold;
+	text-decoration: underline
+}
+
+.container-selector3
+{
+	width: 200px;
+	height: 225px
+}
+
+.selector-end-with
+{
+	height: 100px;
+	width: 178px;
+	margin: 0 0 20px 
+}
+/*The Oppisite Of Start With Selector*/
+.container-selector3 [class$="x"]{color: #F00}
+.selector-end-with [class$="y"]{color: #00F}
+
+
+/*Contains Selector*/
+.container-selector4:before
+{
+	content: 'Contains Selector(*)';
+	font-weight: bold;
+	text-decoration: underline
+}
+
+.container-selector4
+{
+	width: 200px;
+	height: 225px
+}
+
+.selector-contains
+{
+	height: 100px;
+	width: 178px;
+	margin: 0 0 20px 
+}
+/*Any Class Attribute(OR Any Other Attribute) Contain X In It's Value
+  Will Be Affected (In Start Or In End Or Middle)*/
+.container-selector4 [class*="x"]{color: #F00}
+.selector-contains [class*="y"]{color: #00F}
+/*End #49 - Selectors - Next, Start With, End With, Contains*/
+
+
+
+
+/*Start #50 - Selectors - Checked, Enabled, Disabled, Empty*/
+.selector-full-container-form
+{
+	width: 502px;
+    height: auto;
+    border: 0;
+    background-color: transparent;
+    margin: 20px;
+    padding: 0
+}
+
+/*Checked Selector*/
+/*Can't Put Space Before (:)*/
+.container-checked:before
+{
+	content: "Checked Selector";
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 2
+}
+.container-checked
+{
+	width: 442px;
+	height: auto;
+	margin: 0 0 10px
+}
+.selector-checked input[type="radio"]:checked{width: 100px}
+
+
+/*Enabled, Disabled Selector*/
+.container-enabled-disabled:before
+{
+	content: "Enabled/Disabled Selector:";
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 2
+}
+
+.container-enabled-disabled
+{
+	width: 442px;
+	height: auto;
+	margin: 0 0 10px
+}
+
+.container-enabled-disabled :disabled{background-color: red}
+.container-enabled-disabled :enabled{background-color: yellow}
+
+
+/*Empty Selector*/
+.container-empty:before
+{
+	content: "Empty Selector:";
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 2
+}
+
+.container-empty
+{
+	width: 442px;
+	height: auto;
+	margin: 0 0 10px
+}
+
+.container-empty >div
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	height: auto;
+	width: auto;
+	float: none
+}
+
+/*The Empty Elelment Is That Hasn't Any Words 
+  Or Other Elements Inside It */
+  
+/*We Must Turn The Inline Element Into Block Element
+  To Can Give It Width, Height, Background*/
+.container-empty :empty
+{
+	width: 100%;
+	height: 50px;
+	background-color: #080
+}
+/*End #50 - Selectors - Checked, Enabled, Disabled, Empty*/
+
+
+
+
+/*Start #51 - Selectors - Not, Last-Child, First-Of-Type, Last-Of-Type*/
+.selector-full-container1
+{
+	width: 442px;
+	height: auto;
+	background-color: transparent;
+	border: 0;
+	padding: 0
+}
+
+
+.selector-not-last-child-first-child
+{
+	width: 442px;
+	height: auto;
+	margin: 0 0 10px
+}
+
+.selector-not-last-child-first-child:before
+{
+	content: "Not, First-Child, Last-Child Selectors:";
+	font-weight: bold;
+    text-decoration: underline;
+    line-height: 2
+}
+
+.selector-not-last-child-first-child >div
+{
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+	float: none
+}
+
+/*Not Selector*/
+/*Change Color To Every Thing Exept (P)*/
+/*We Can Use It With Element(Div, Aside, Span, ...)
+  OR Classes OR With Other Selectors(first-child, last-of-type, ...)*/
+/*Must Put Space Before (:)*/
+.selector-not-last-child-first-child :not(div){color: #F00}
+
+/*First Child Selector*/
+.selector-not-last-child-first-child :first-child{color: #080}
+
+/*Last Child Selector*/
+.selector-not-last-child-first-child :last-child{color: #00F}
+
+
+/*First-Of-Type, Last-Of-Type Selectors*/
+
+/*So:
+a[width="33"] will select all anchor (a) tags that have the property of width="33".
+a [width="33"] will select all elements that are inside an anchor (a) tag that have the property of width="33".
+The space is there to go down a level in the CSSOM tree. If there is no space, the selector targets the current level.
+Hope that clears it up.*/
+.selector-first-of-type-last-of-type:before
+{
+	content: "First-Of-Type, Last-Of-Type Selectors:";
+	font-weight: bold;
+    text-decoration: underline;
+    line-height: 2
+}
+
+.selector-first-of-type-last-of-type
+{
+	width: 442px;
+	height: auto;
+	margin: 0 0 10px
+}
+
+.selector-first-of-type-last-of-type >div
+{
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+	float: none
+}
+
+/*Color Changed To The First Div*/
+.selector-first-of-type-last-of-type div:first-of-type{color: #F00}
+
+/*Color Changed To The Last P*/
+.selector-first-of-type-last-of-type p:last-of-type{color: #00F}
+/*End #51 - Selectors - Not, Last-Child, First-Of-Type, Last-Of-Type*/
+
+
+
+
+/*Start #52 - Selectors - Only-Child, Only-Of-Type, Selection*/
+.selector-full-container2:before
+{
+	content: "Only-Child, Only-Of-Type, Selection Selectors:";
+	font-weight: bold;
+    text-decoration: underline;
+    line-height: 2
+}
+.selector-full-container2
+{
+	width: 442px;
+	height: auto
+}
+
+.only-child
+{
+	margin: 0 0 10px;
+	width: 100%;
+	height: auto;
+	float: none
+}
+
+/*Color Changed For The P At Div That Contain A single P
+  P In Div That Contain 2 P Didn't Changed*/
+.only-child p:only-child{color: #F00}
+
+/*Color Changed For P At Div That Contain Single P*/
+.only-child p:only-of-type{color: #F00}
+
+/*Background-Color, color Changed For Span*/
+/*::selection Accept(background-color, color, text-shadow) 
+  But Not Accept Padding (For Example)*/
+.only-child span::selection{background-color: #333; color: #FFF}
+/*End #52 - Selectors - Only-Child, Only-Of-Type, Selection*/

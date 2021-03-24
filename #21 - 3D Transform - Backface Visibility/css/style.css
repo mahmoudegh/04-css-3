@@ -1,0 +1,518 @@
+/*Start Global*/
+*
+{
+	font-family: Arial, Tahoma;
+	margin: 0;
+ 	padding: 0;
+ 	/*box-sizing: content-box; (Default Value)*/
+ 	/*Allow Me To Add Border Or Pading (exept margin)
+ 	  Without Change In The Arrange Of Elements*/
+ 	box-sizing: border-box
+}
+
+
+div
+{
+	float: left;
+	width: 50%;
+	width:200px;
+	height: 200px;
+	margin: 20px;
+	padding: 10px;
+	background-color: #EEE;
+	border: 1px solid #CCC
+}
+
+h3, a{float: right; width: 50%; padding: 5px}
+
+hr{width: 100%; overflow: hidden}
+
+
+img{display: block}
+
+.img-container
+{
+	float: left;
+	width: 50%;
+	width: 400px;
+	height: 200px;
+	margin: 20px;
+	padding: 20px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	/*To Activate 3D*/
+	perspective: 600px
+}
+/*End Global*/
+
+
+/*Start #03 - Border Radius*/
+.border-radius
+{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 50px;
+
+	/*This Is The Same As Above*/
+	border-radius: 10px 30px 40px 50px 
+}
+/*End #03 - Border Radius*/
+
+
+/*Start #04 - Box Shadow*/
+/*box-shadow: Horizontal(+/-), Vertical(+/-), Blur, 
+  Spread(rare used),Color, Inset(rare used)*/
+.box-shadow
+{
+	box-shadow:-5px -5px 8px #F00,
+			    /*Another Shadow*/
+			    5px 5px 8px #00F,
+			    /*Another Shadow*/
+			   -10px -10px 8px #080
+}
+/*End #04 - Box Shadow*/
+
+
+/*Start #05 - Box Sizing*/
+/*Look To box-sizing; In Global*/
+section
+{
+	float: left;
+	width: 400px;
+	margin: 20px;
+	background-color: #EEE;
+	overflow: hidden
+}
+
+/*If We Add Padding Or Border
+  The Arrange Of Div Will Change So We
+  Use (box-sizing:border-box;) To Fix This*/
+.left
+{
+	float: left;
+	width: 30%;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #CCC;
+	height: auto;
+	background-color: #F00;
+	color: #FFF
+}
+
+.right
+{
+	float: right;
+	width: 70%;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #CCC;
+	height:auto;
+	background-color: #00F;
+	color: #FFF
+}
+/*End #05 - Box Sizing*/
+
+
+/*Start #06 - Examples Box Shadow, Border Radius*/
+img.examples
+{
+	float: left;
+	display: inline;
+	margin: 20px;
+	padding: 3px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	box-shadow: 7px  7px 20px #000,
+			   -7px -7px 20px #E4E4E4
+}
+
+img.examples:hover
+{
+	border-radius: 50%;
+}
+/*End #06 - Examples Box Shadow, Border Radius*/
+
+
+
+/*Start #07 - Text Shadows*/
+/*box-shadow: Horizontal(+/-), Vertical(+/-), Blur-Radius, Color*/
+/*The Default (text-shadow:none;)*/
+h1
+{
+	float: left;
+	margin: 20px;
+	text-shadow: 1px 2px 3px #2342F0,
+				 /*Another Shadow*/
+				 2px 3px 7px #9F9F9F,
+				 /*Another Shadow*/
+				 1px 2px 3px #F01149
+}
+/*End #07 - Text Shadows*/
+
+
+
+/*Start #08 - Text Overflow*/ 
+.text-overflow 
+{  
+	height: auto;   
+	/*Prevent The Sentence From Wrap*/
+	white-space:nowrap;
+	/*Clear The Sentence Outside The Div*/
+	overflow: hidden;
+	/*text-overflow: clip(Default), ellipsis, inherit*/
+	text-overflow: ellipsis
+}
+
+.text-overflow:hover
+{
+	overflow: visible;
+} 
+/*End #08 - Text Overflow*/
+
+
+
+/*Start #09 - Word Wrap, White Space*/
+.word-wrap
+{
+	height: auto;
+	/*Diference Between white-space: & word-wrap: IS THAT:
+	  # white-space: Need Space To Break The Sentence From It.
+	  # word-wrap: Dont Need Space Because IT Break The Word.*/
+	/*word-wrap: normal(Default), break-word*/
+	word-wrap: break-word
+}
+/*End #09 - Word Wrap, White Space*/
+
+
+
+/*Start #10 - 2D Transform - Rotate*/
+.transform-rotate
+{
+	/*deg==>degree*/
+	transform: none;
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-rotate:hover
+{
+	transform: rotate(25deg);
+}
+/*End #10 - 2D Transform - Rotate*/
+
+
+
+/*Start #11 - 2D Transform - Scale*/
+.transform-scale
+{
+	/*transform: scale(width, height);*/
+	/*transform: scale(2); Mean That[X=2,Y=2]*/
+	/*transform: scale(0.5,0.5); Is The Same As (.5,.5);*/
+	/*transform: scaleX(2);  [X=width]*/
+	/*transform: scaleY(2);  [Y=height]*/
+	/*transform: scale(-1,1); This Make Flip Over*/
+	transform: none;
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-scale:hover
+{
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: scale(2,2)
+}
+/*End #11 - 2D Transform - Scale*/
+
+
+
+/*Start #12 - 2D Transform - Translate*/
+.transform-translate
+{
+	/*Will Discuss Later*/
+	transition: all 1s ease-in-out
+}
+
+.transform-translate:hover
+{
+	/*transform: translate (horizontal,vertical);*/
+	/*transform: translate (10px); Mean That[X=10px,Y=0]*/
+	/*transform: translate (+,-);*/
+	/*transform: translateX(10px);  [X=horizontal]*/
+	/*transform: translateY(10px);  [Y=vertical]*/
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: translate(100px,50px);
+	/*Can Use Multiple Transform Types, Uncomment & Try That Below*/
+	/*transform: scale(.7) translate(500px,15px) rotate(360deg)*/
+	/*The End Result Differ According To The Arrange Of Transform Types*/
+}
+/*End #12 - 2D Transform - Translate*/
+
+
+
+/*Start #13 - 2D Transform - Skew*/
+/*Will Discuss Later*/
+.transform-skew{transition: all 1s ease-in-out}
+
+.transform-skew:hover
+{
+	/*transform: skew (X deg,Y deg);*/
+	/*transform: skew (10deg); Mean That[X=10deg,Y=0deg]*/
+	/*transform: skew (+,-);*/
+	/*transform: skewX(10deg); [X=The resulting angle of intersection {Y Of <p>} With {Y Of <div>}]*/
+	/*transform: skewY(10deg); [Y=The resulting angle of intersection {X Of <p>} With {X Of <div>}]*/
+	/*transform: none; (Default For Any Transform Type)*/
+	transform: skew(30deg,10deg);
+	/*Can Use Multiple Transform Types, Uncomment & Try That Below*/
+	/*transform: scale(.7) translate(500px,15px) rotate(360deg) skew(30deg.10deg)*/
+	/*The End Result Differ According To The Arrange Of Transform Types*/
+}
+/*End #13 - 2D Transform - Skew*/
+
+
+
+/*Start #14 - 2D Transform - Matrix*/
+/*transform: matrix(  a,      b,     c,     d,        x,          y     )*/
+/*transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)*/
+/*transform: matrix(  1,      0,     0,     1,        0,          0     )*/
+img.matrix{transition: all 1s ease-in-out}
+
+img.matrix:hover
+/*Uncomment & Test*/
+{
+	/*transform: matrix(1, 0, 0, 1, 300, 30);*/
+	/*transform: translate(300px,30px);*/
+
+	/*transform: matrix(-1, 0, 0, 1, 0, 0);*/
+	transform: scale(-1, 1);
+
+	/*transform: matrix(.86, .5, -.5, .86, 0, 0);*/
+	/*transform: rotate(30deg)*/
+}
+/*End #14 - 2D Transform - Matrix*/
+
+
+
+/*Start #15 - 3D Transform - Rotate X, Y, Z()*/
+img.transform-3d-rotate{transition: all 1s ease-in-out}
+
+/*transform: rotateX(), rotateY(), rotateZ()*/
+/*3D Rotate Do Somthings The Same As Different Types Of 2D Transform Types Do*/
+/*This Do The Same As Flip Over*/
+/*When We Activated 3D The WAy Of Flip Changed*/
+img.transform-3d-rotate:hover{transform: rotateY(180deg)}
+/*End #15 - 3D Transform - Rotate X, Y, Z()*/
+
+
+
+
+/*Start #16 - 3D Transform - Translate 3D*/
+img.transform-3d-translate{transition: all 1s ease-in-out}
+
+/*The Third Diamension(3D) Activated With perspective For Body In Global*/
+/*translate3d(0, 0, 100px) Is The Same As translateZ(100px)*/
+/*Therefore We Have translateX(), translateY(), translateZ()*/
+/*Translate(X, Y, Z) Accept(+/-)*/
+img.transform-3d-translate:hover{transform: translate3d(50px,50px,50px)}
+/*End #16 - 3D Transform - Translate 3D*/
+
+
+
+/*Start #17 - 3D Transform - Scale 3D*/
+img.transform-3d-scale{transition: all 1s ease-in-out}
+
+/*We Must Use Another Transform Type With 3D Scale (As RotateY) To Can See It's Effect*/
+img.transform-3d-scale:hover{transform: scale3d(1, 1, 2) rotateY(60deg)}
+/*End #17 - 3D Transform - Scale 3D*/
+
+
+
+/*Start #18 - 3D Transform - Matrix 3D*/
+/*transform: matrix3d(  0,    0,0,0,0,   0,    0,0,0,0,0,0,     0,          0,        0,    0)*/
+/*transform: matrix3d(scaleX, 0,0,0,0, scaleY, 0,0,0,0,0,0, translateX, translateY, scaleZ, 0)*/
+img.transform-3d-matrix{transition: all 1s ease-in-out}
+
+img.transform-3d-matrix:hover
+{
+	transform: matrix3d( 0.07175660428631994, -0.09699054404837933, 0,	
+		                -0.0005036521059873574, -1.1547011149629907,	
+		                 0.12209983243960523, 0, -0.0032479806684548493,
+                         0, 0, 1, 0, 222, 58, 0, 1)
+}
+/*End #18 - 3D Transform - Matrix 3D*/
+
+
+
+/*Start #19 - 3D Transform - Perspective*/
+img.perspective
+{
+	transition: all 1s ease-in-out; 
+	/*transform: translateZ(100px)*/
+}
+/*perspective is the distance betwwen the element and the user*/
+/*the 3rd diamension of the element(child) can't be more than the perspective of the parent()it will disapear*/
+img.perspective:hover{transform: translateZ(100px)}
+
+/*When The Perspective Increase The Size Of The Element Decrease And The opposite is true
+(In the case of the stability of the third dimension)*/
+/*Perspective Origin Is The Vanshing Point Where The Viewer Look To In The Elelment*/
+/*Perspective Origin Values: [X , Y] = [50% , 50%] = [px, px] = [left, right, center, top, bottom]*/
+.container
+{
+	float: left;
+	width: 50%;
+	width:400px;
+	height: 630px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 0
+}
+
+.img-container-a, .img-container-b, .img-container-c
+{
+	 height: 183px;
+	 margin: 20px auto;
+	 padding: 0;
+	 background-color: #EEE;
+	 border: 1px solid #CCC;
+	 float: none;
+	 width: 361px
+}
+
+/*Left=0 , Center=50% , Right=100%*/
+.img-container-a{perspective: 500px; perspective-origin: 50% 50%}
+
+.img-container-b{perspective: 300px; perspective-origin: center}
+
+.img-container-c{perspective: 200px; perspective-origin: center}
+
+p{text-align: center}
+/*End #19 - 3D Transform - Perspective*/
+
+
+
+/*Start #20 - 3D Transform - Transform Origin*/
+.transform-origin{transition: all 1s ease-in-out}
+
+.transform-origin:hover
+{
+	transform: rotate(360deg);
+	/*Transform Origin Specifies the starting point of the movement*/
+	/*Transform Origin Values (%,%   top,bottom,right,left,center   px)*/
+	transform-origin: top right
+}
+/*End #20 - 3D Transform - Transform Origin*/
+
+
+
+/*Start #20 - 3D Transform - Transform Style*/
+.container-style
+{
+	float: left;
+	width: 50%;
+	width:400px;
+	height: 300px;
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 20px;
+	perspective: 500px
+}
+.father
+{
+	width: 180px;
+	height: 180px;
+	position: relative;
+	background-color: #080;
+	transition: all .5s ease-in-out;
+	transform: rotateY(20deg);
+	float: none;
+	/*The Default Value Of transform-style: flat;*/
+	/*transform-style: preserve-3d;  preserve The 3D Style*/
+	transform-style: preserve-3d;
+}
+
+.child1
+{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	background-color: #F00;
+	transform: translateZ(50px) rotateY(45deg);
+	float: none;
+	margin: 0
+}
+
+.child2
+{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	background-color: #00F;
+	transform: translateZ(150px) rotateX(45deg);
+	float: none;
+	margin: 0
+}
+/*End #20 - 3D Transform - Transform Style*/
+
+
+
+/*Start #21 - 3D Transform - Backface Visibility*/
+.container-backface
+{
+	width: 400px;
+	height: 264px;
+	perspective: 500px
+}
+.backface-visibility-father
+{
+	padding: 0;
+	background-color:transparent;
+	border: 0;
+	margin: 20px 88px;
+	position: relative;
+	transition: all .5s ease-in-out;
+	transform-style: preserve-3d
+}
+
+.backface-visibility-father:hover
+{
+	transform: rotateY(180deg)
+}
+
+.backface-visibility-father >div
+{
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	color: #FFF;
+	font-size: 20px;
+	text-align: center
+}
+
+.front
+{
+	z-index: 2;
+	background-color: #F00;
+	/*backface-visibility: visible;(Default), hidden*/
+	backface-visibility: hidden;
+	/*This To Fix A problem In Firefox 
+	OR We Can Add backface-visibility:hidden; To Father*/
+	transform: rotateX(0deg);
+}
+
+.back
+{
+	z-index: 1;
+	background-color: #00F;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+/*End #21 - 3D Transform - Backface Visibility*/

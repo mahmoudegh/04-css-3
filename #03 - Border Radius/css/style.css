@@ -1,0 +1,33 @@
+/*Start Global*/
+*{margin: 0; padding: 0}
+
+div
+{
+	float: left;
+	width: 50%;
+	width:200px;
+	height: 200px;
+	margin: 20px;
+	padding: 10px;
+	background-color: #EEE;
+	border: 1px solid #CCC
+}
+
+h3, a{float: right; width: 50%}
+
+hr{width: 100%; overflow: hidden}
+/*End Global*/
+
+
+/*Start #03 - Border Radius*/
+.border-radius
+{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 50px;
+
+	/*This Is The Same As Above*/
+	border-radius: 10px 30px 40px 50px 
+}
+/*End #03 - Border Radius*/
